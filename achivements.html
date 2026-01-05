@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengalaman Organisasi | Adi Prasetyo</title>
+    <title>Pencapaian & Sertifikat | Adi Prasetyo</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -201,196 +201,204 @@
             padding: 0 2rem;
         }
         
-        /* Experience Timeline Section */
-        .experience-section {
-            padding: 5rem 2rem;
+        /* Filter Section */
+        .filter-section {
+            padding: 3rem 2rem 1rem;
             background: var(--neutral-darkest);
             position: relative;
         }
         
-        .experience-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 900px;
+        .filter-container {
+            max-width: 1200px;
             margin: 0 auto;
         }
         
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 2px;
-            transform: translateX(-50%);
+        .filter-title {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
         }
         
-        .timeline-item {
-            position: relative;
-            margin-bottom: 4rem;
-            width: 100%;
+        .filter-buttons {
             display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
         }
         
-        .timeline-item:nth-child(odd) {
-            justify-content: flex-start;
-        }
-        
-        .timeline-item:nth-child(even) {
-            justify-content: flex-end;
-        }
-        
-        .timeline-content {
-            width: 45%;
-            background: rgba(30, 41, 59, 0.7);
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            position: relative;
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            color: var(--neutral-light);
+            cursor: pointer;
             transition: all 0.3s ease;
-            border-top: 4px solid var(--primary);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .timeline-content:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-            background: rgba(30, 41, 59, 0.9);
-            border-color: var(--secondary);
+        .filter-btn:hover {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-right: 5%;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: 5%;
-        }
-        
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: 2rem;
-            width: 20px;
-            height: 20px;
-            background: var(--neutral-darker);
-            border: 4px solid var(--primary);
-            border-radius: 50%;
-            z-index: 1;
-            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
-        }
-        
-        .timeline-item:nth-child(odd) .timeline-content::before {
-            right: -52px;
-        }
-        
-        .timeline-item:nth-child(even) .timeline-content::before {
-            left: -52px;
-        }
-        
-        .timeline-date {
-            display: inline-block;
+        .filter-btn.active {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            border-color: transparent;
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
         }
         
-        .timeline-icon {
+        /* Certificates Grid */
+        .certificates-section {
+            padding: 2rem 2rem 5rem;
+            background: var(--neutral-darkest);
+            position: relative;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .certificate-card {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary);
+        }
+        
+        .certificate-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .certificate-card:hover .certificate-image img {
+            transform: scale(1.05);
+        }
+        
+        .certificate-overlay {
             position: absolute;
-            top: -20px;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            border-radius: 50%;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.25rem;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            opacity: 0;
             transition: all 0.3s ease;
         }
         
-        .timeline-content:hover .timeline-icon {
-            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
-            transform: scale(1.1);
+        .certificate-card:hover .certificate-overlay {
+            opacity: 1;
         }
         
-        .timeline-item:nth-child(even) .timeline-icon {
-            right: auto;
-            left: 2rem;
+        .view-certificate {
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
         
-        .timeline-content h3 {
-            font-size: 1.5rem;
-            color: var(--white);
-            margin-bottom: 0.5rem;
+        .view-certificate:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
         }
         
-        .timeline-content h4 {
-            font-size: 1.125rem;
-            color: var(--primary-light);
-            font-weight: 500;
+        .certificate-card:hover .view-certificate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .certificate-content {
+            padding: 2rem;
+        }
+        
+        .certificate-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 1rem;
         }
         
-        .timeline-content > p {
-            color: var(--neutral-light);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
+        .certificate-date {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
         }
         
-        .experience-list {
-            list-style: none;
-            padding: 0;
-            margin: 1.5rem 0;
-        }
-        
-        .experience-list li {
-            position: relative;
-            padding-left: 1.75rem;
+        .certificate-title {
+            font-size: 1.3rem;
+            color: var(--white);
             margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .certificate-issuer {
+            color: var(--primary-light);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .certificate-issuer i {
+            font-size: 0.9rem;
+        }
+        
+        .certificate-description {
             color: var(--neutral-lighter);
             line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
         }
         
-        .experience-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-        
-        .experience-tags {
+        .certificate-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: 1.5rem;
         }
         
-        .tag {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+        .certificate-tag {
+            padding: 0.4rem 0.9rem;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(59, 130, 246, 0.1));
             color: var(--neutral-lighter);
-            padding: 0.375rem 1rem;
             border-radius: 2rem;
             font-size: 0.75rem;
             font-weight: 500;
@@ -398,112 +406,104 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .tag:hover {
+        .certificate-tag:hover {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
         }
         
-        /* Skills Section */
-        .skills-section {
-            padding: 5rem 2rem;
-            background: var(--neutral-darker);
-            position: relative;
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--neutral-light);
+            grid-column: 1 / -1;
         }
         
-        .skills-section::before {
-            content: '';
-            position: absolute;
+        .empty-icon {
+            font-size: 4rem;
+            color: var(--neutral);
+            margin-bottom: 1.5rem;
+            opacity: 0.5;
+        }
+        
+        .empty-state h3 {
+            color: var(--neutral-lighter);
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+        }
+        
+        .empty-state p {
+            max-width: 400px;
+            margin: 0 auto 1.5rem;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
         
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
+        .modal.active {
+            display: flex;
+            opacity: 1;
         }
         
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.75rem;
-            text-align: center;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 2px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.125rem;
-            color: var(--neutral-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .skill-card {
-            background: rgba(30, 41, 59, 0.7);
-            padding: 2rem;
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
             border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(5px);
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
         }
         
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(59, 130, 246, 0.3);
+        .modal.active .modal-content {
+            transform: scale(1);
         }
         
-        .skill-icon {
-            width: 60px;
-            height: 60px;
+        .modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border: none;
+            color: white;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.25rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 auto 1.5rem;
-            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
         
-        .skill-card h3 {
-            font-size: 1.25rem;
-            color: var(--white);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-        
-        .skill-card p {
-            color: var(--neutral-lighter);
-            text-align: center;
-            line-height: 1.6;
+        .modal-close:hover {
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
         }
         
         /* Footer Styles */
@@ -710,8 +710,8 @@
                 font-size: 3rem;
             }
             
-            .timeline-content {
-                padding: 2rem;
+            .certificates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
         }
         
@@ -728,34 +728,24 @@
                 font-size: 1.125rem;
             }
             
-            .experience-section, .skills-section {
-                padding: 3rem 1.5rem;
+            .filter-section,
+            .certificates-section {
+                padding: 2rem 1.5rem 3rem;
             }
             
-            .timeline::before {
-                left: 30px;
+            .certificates-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
             
-            .timeline-item {
-                flex-direction: column;
-                margin-bottom: 3rem;
+            .filter-buttons {
+                gap: 0.5rem;
+                justify-content: center;
             }
             
-            .timeline-content {
-                width: 100%;
-                margin-left: 60px !important;
-                margin-right: 0 !important;
-            }
-            
-            .timeline-content::before {
-                left: -42px !important;
-                right: auto !important;
-            }
-            
-            .timeline-icon {
-                top: -20px;
-                right: 2rem;
-                left: auto !important;
+            .filter-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
             }
             
             /* Mobile Navigation */
@@ -834,41 +824,20 @@
                 font-size: 2rem;
             }
             
-            .section-title {
-                font-size: 1.75rem;
-            }
-            
-            .timeline-content {
-                padding: 1.5rem;
-                margin-left: 50px !important;
-            }
-            
-            .timeline-content::before {
-                left: -36px !important;
-                width: 16px;
-                height: 16px;
-            }
-            
-            .timeline-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-            
-            .timeline-content h3 {
+            .filter-title {
                 font-size: 1.25rem;
             }
             
-            .timeline-content h4 {
-                font-size: 1rem;
+            .certificate-content {
+                padding: 1.5rem;
             }
             
-            .experience-tags {
-                gap: 0.375rem;
+            .certificate-title {
+                font-size: 1.2rem;
             }
             
-            .tag {
-                padding: 0.25rem 0.75rem;
+            .certificate-tag {
+                padding: 0.3rem 0.7rem;
                 font-size: 0.7rem;
             }
             
@@ -899,8 +868,8 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">Tentang</a></li>
-                <li class="nav-item"><a href="experience.html" class="nav-link active">Pengalaman</a></li>
-                <li class="nav-item"><a href="achivements.html" class="nav-link">Pencapaian</a></li>
+                <li class="nav-item"><a href="experience.html" class="nav-link">Pengalaman</a></li>
+                <li class="nav-item"><a href="achievements.html" class="nav-link active">Pencapaian</a></li>
                 <li class="nav-item"><a href="project.html" class="nav-link">Proyek</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Kontak</a></li>
             </ul>
@@ -912,117 +881,102 @@
         </div>
     </nav>
 
-    <!-- Experience Hero Section -->
+    <!-- Achievements Hero Section -->
     <section class="page-hero">
         <div class="container">
-            <h1 class="page-title">Pengalaman Organisasi</h1>
-            <p class="page-subtitle">Perjalanan saya dalam organisasi pelajar dan mahasiswa Muhammadiyah</p>
+            <h1 class="page-title">Pencapaian & Sertifikat</h1>
+            <p class="page-subtitle">Dokumentasi pencapaian, sertifikasi, dan pengakuan dalam perjalanan akademik dan profesional saya</p>
         </div>
     </section>
 
-    <!-- Experience Timeline -->
-    <section class="experience-section">
-        <div class="container">
-            <div class="timeline">
-                <!-- Experience Item 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2020 - 2023</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Ikatan Pelajar Muhammadiyah (IPM)</h3>
-                        <h4>Anggota Aktif & Koordinator Bidang Keilmuan</h4>
-                        <p>Sebagai anggota aktif IPM selama masa SMA, saya terlibat dalam berbagai kegiatan organisasi yang mengembangkan kemampuan kepemimpinan, kerja tim, dan pengabdian masyarakat.</p>
-                        <ul class="experience-list">
-                            <li>Mengkoordinasikan kegiatan diskusi keilmuan dan kajian rutin untuk anggota IPM</li>
-                            <li>Merancang dan melaksanakan program "Gerakan Literasi Sekolah" yang meningkatkan minat baca siswa</li>
-                            <li>Mengorganisir acara bakti sosial dan pengabdian masyarakat di lingkungan sekitar sekolah</li>
-                            <li>Membimbing anggota baru dalam memahami nilai-nilai Muhammadiyah dan kepemimpinan</li>
-                            <li>Berpartisipasi dalam Musyawarah Daerah IPM sebagai perwakilan sekolah</li>
-                        </ul>
-                        <div class="experience-tags">
-                            <span class="tag">Kepemimpinan</span>
-                            <span class="tag">Organisasi Pelajar</span>
-                            <span class="tag">Koordinasi Acara</span>
-                            <span class="tag">Pengabdian Masyarakat</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Experience Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - Sekarang</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-user-graduate"></i>
-                        </div>
-                        <h3>Ikatan Mahasiswa Muhammadiyah (IMM)</h3>
-                        <h4>Anggota Bidang Riset dan Pengembangan Keilmuan</h4>
-                        <p>Aktif berkontribusi dalam Ikatan Mahasiswa Muhammadiyah sebagai bagian dari upaya pengembangan keilmuan dan intelektualitas mahasiswa sesuai dengan tri kompetensi IMM.</p>
-                        <ul class="experience-list">
-                            <li>Mengembangkan program "Tech for Ummah" yang mengintegrasikan teknologi dengan nilai-nilai Islam</li>
-                            <li>Menjadi fasilitator dalam workshop pengembangan diri dan soft skills untuk mahasiswa</li>
-                            <li>Berpartisipasi dalam kegiatan sosial kemanusiaan dan pengabdian pada masyarakat</li>
-                            <li>Menyelenggarakan diskusi ilmiah tentang isu-isu kontemporer dan solusi berdasarkan nilai Islam</li>
-                            <li>Mengembangkan konten edukatif di media sosial IMM untuk menjangkau generasi muda</li>
-                            <li>Kolaborasi dengan organisasi kemahasiswaan lain untuk acara lintas organisasi</li>
-                        </ul>
-                        <div class="experience-tags">
-                            <span class="tag">Riset & Pengembangan</span>
-                            <span class="tag">Kepemimpinan Mahasiswa</span>
-                            <span class="tag">Pengabdian Masyarakat</span>
-                            <span class="tag">Pengembangan Konten</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <h2 class="filter-title">Filter Kategori</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="sertifikasi">Sertifikasi</button>
+                <button class="filter-btn" data-filter="kompetisi">Kompetisi</button>
+                <button class="filter-btn" data-filter="kursus">Kursus Online</button>
+                <button class="filter-btn" data-filter="workshop">Workshop</button>
+                <button class="filter-btn" data-filter="akademik">Akademik</button>
             </div>
         </div>
     </section>
 
-    <!-- Skills Gained Section -->
-    <section class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Keterampilan yang Diperoleh</h2>
-                <p class="section-subtitle">Kemampuan yang saya kembangkan melalui pengalaman organisasi</p>
+    <!-- Certificates Grid -->
+    <section class="certificates-section">
+        <div class="certificates-grid" id="certificatesGrid">
+    <!-- Certificate 1 (Sertifikat READY4AI&SECURITY) -->
+        <div class="certificate-card" data-category="kursus sertifikasi">
+            <div class="certificate-image">
+                <img src="assets/certificates/ready4ai-security-cert.jpg" alt="READY4AI&SECURITY TRAINING Certificate">
+                <div class="certificate-overlay">
+                    <a href="#" class="view-certificate" data-image="assets/certificates/ready4ai-security-cert.jpg">
+                        Lihat Sertifikat
+                    </a>
+                </div>
             </div>
-            
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-people-carry"></i>
-                    </div>
-                    <h3>Kepemimpinan</h3>
-                    <p>Kemampuan memimpin tim, mengambil inisiatif, dan membuat keputusan strategis dalam berbagai kegiatan organisasi.</p>
+            <div class="certificate-content">
+                <div class="certificate-header">
+                    <h3 class="certificate-title">READY4AI&SECURITY TRAINING</h3>
+                    <span class="certificate-date">2024</span>
                 </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Komunikasi</h3>
-                    <p>Keterampilan berkomunikasi efektif dengan berbagai pihak, penyampaian ide, dan negosiasi dalam tim kerja.</p>
+                <div class="certificate-issuer">
+                    <i class="fas fa-building"></i> InfraDigital Foundation
                 </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tasks"></i>
-                    </div>
-                    <h3>Manajemen Proyek</h3>
-                    <p>Kemampuan merencanakan, mengorganisir, dan melaksanakan program kerja organisasi dari awal hingga evaluasi.</p>
-                </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3>Kerja Tim</h3>
-                    <p>Kemampuan bekerja sama dalam tim, menghargai perbedaan pendapat, dan berkontribusi untuk mencapai tujuan bersama.</p>
+                <p class="certificate-description">
+                    Program pelatihan keamanan siber dan AI yang mencakup Security Principles, Incident Response, Network Security, Microsoft Security Solutions (SC-900), serta Career Essentials in Generative AI. Total durasi 54 jam.
+                </p>
+                <div class="certificate-tags">
+                    <span class="certificate-tag">Cybersecurity</span>
+                    <span class="certificate-tag">Microsoft Security</span>
+                    <span class="certificate-tag">AI & Generative AI</span>
+                    <span class="certificate-tag">Network Security</span>
                 </div>
             </div>
         </div>
+            <!-- Certificate 2 -->
+            <div class="certificate-card" data-category="pendidikan">
+            <div class="certificate-image">
+                <img src="assets/certificates/sertifikasi-informatika.jpg" alt="Sertifikat Informatika">
+                <div class="certificate-overlay">
+                    <a href="#" class="view-certificate" data-image="assets/certificates/sertifikasi-informatika.jpg">
+                        Lihat Sertifikat
+                    </a>
+                </div>
+            </div>
+            <div class="certificate-content">
+                <div class="certificate-header">
+                    <h3 class="certificate-title">Sertifikat Informatika</h3>
+                    <span class="certificate-date">2023</span>
+                </div>
+                <div class="certificate-issuer">
+                    <i class="fas fa-school"></i> Pondok Pesantren Muhammadiyah Green School Wonogiri
+                </div>
+                <p class="certificate-description">
+                    Menyelesaikan program pendidikan Informatika selama 3 tahun pembelajaran di Pondok Pesantren Muhammadiyah Green School Wonogiri dengan kompetensi di bidang teknologi informasi dan komputer.
+                </p>
+                <div class="certificate-tags">
+                    <span class="certificate-tag">Informatika</span>
+                    <span class="certificate-tag">Pendidikan Formal</span>
+                    <span class="certificate-tag">IT Fundamentals</span>
+                    <span class="certificate-tag">3 Tahun</span>
+                </div>
+            </div>
+        </div>
+        </div>
     </section>
+
+    <!-- Modal for Certificate View -->
+    <div class="modal" id="certificateModal">
+        <button class="modal-close" id="closeModal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage" src="" alt="Certificate Preview">
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1038,7 +992,7 @@
                         <li><a href="index.html">Beranda</a></li>
                         <li><a href="about.html">Tentang</a></li>
                         <li><a href="experience.html">Pengalaman</a></li>
-                        <li><a href="achivements.html">Pencapaian</a></li>
+                        <li><a href="achievements.html">Pencapaian</a></li>
                         <li><a href="project.html">Proyek</a></li>
                         <li><a href="contact.html">Kontak</a></li>
                     </ul>
@@ -1080,7 +1034,7 @@
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // Add scroll effect to navbar
+        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
@@ -1114,28 +1068,100 @@
             });
         });
         
-        // Animate timeline items when they come into view
-        const timelineItems = document.querySelectorAll('.timeline-content');
-        const skillCards = document.querySelectorAll('.skill-card');
+        // Certificate Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const certificateCards = document.querySelectorAll('.certificate-card');
         
-        const animateOnScroll = () => {
-            // Animate timeline items
-            timelineItems.forEach(item => {
-                const rect = item.getBoundingClientRect();
-                const isVisible = (rect.top <= window.innerHeight - 100) && (rect.bottom >= 0);
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
                 
-                if (isVisible) {
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Get filter category
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter certificates
+                let visibleCount = 0;
+                certificateCards.forEach(card => {
+                    const categories = card.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || categories.includes(filterValue)) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show empty state if no certificates
+                let emptyState = document.querySelector('.empty-state');
+                if (visibleCount === 0) {
+                    if (!emptyState) {
+                        emptyState = document.createElement('div');
+                        emptyState.className = 'empty-state';
+                        emptyState.innerHTML = `
+                            <div class="empty-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3>Tidak Ada Sertifikat</h3>
+                            <p>Tidak ada sertifikat yang ditemukan untuk kategori ini.</p>
+                        `;
+                        document.getElementById('certificatesGrid').appendChild(emptyState);
+                    }
+                } else if (emptyState) {
+                    emptyState.remove();
                 }
             });
-            
-            // Animate skill cards
-            skillCards.forEach((card, index) => {
+        });
+        
+        // Modal Functionality
+        const modal = document.getElementById('certificateModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeModal = document.getElementById('closeModal');
+        
+        // Open modal when clicking view certificate
+        document.querySelectorAll('.view-certificate').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const imageSrc = link.getAttribute('data-image');
+                modalImage.src = imageSrc;
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Animate certificate cards on scroll
+        const animateOnScroll = () => {
+            certificateCards.forEach((card, index) => {
                 const rect = card.getBoundingClientRect();
                 const isVisible = (rect.top <= window.innerHeight - 100) && (rect.bottom >= 0);
                 
-                if (isVisible) {
+                if (isVisible && card.style.opacity !== '1') {
                     setTimeout(() => {
                         card.style.opacity = '1';
                         card.style.transform = 'translateY(0)';
@@ -1145,15 +1171,9 @@
         };
         
         // Set initial state for animated elements
-        timelineItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        });
-        
-        skillCards.forEach(card => {
+        certificateCards.forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
+            card.style.transform = 'translateY(30px)';
             card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
         
@@ -1163,45 +1183,19 @@
         // Animate on scroll
         window.addEventListener('scroll', animateOnScroll);
         
-        // Add animation to tags on hover
-        const tags = document.querySelectorAll('.tag');
+        // Add hover animation to tags
+        const tags = document.querySelectorAll('.certificate-tag');
         tags.forEach(tag => {
             tag.addEventListener('mouseenter', () => {
-                tag.style.transform = 'translateY(-2px)';
+                tag.style.transform = 'translateY(-2px) scale(1.05)';
             });
             
             tag.addEventListener('mouseleave', () => {
-                tag.style.transform = 'translateY(0)';
+                tag.style.transform = 'translateY(0) scale(1)';
             });
         });
         
-        // Create floating elements dynamically
-        function createFloatingElements() {
-            const sections = ['.page-hero', '.experience-section', '.skills-section'];
-            
-            sections.forEach(sectionSelector => {
-                const section = document.querySelector(sectionSelector);
-                if (section) {
-                    for (let i = 0; i < 3; i++) {
-                        const element = document.createElement('div');
-                        element.className = 'floating-element';
-                        element.style.width = `${Math.random() * 60 + 20}px`;
-                        element.style.height = element.style.width;
-                        element.style.left = `${Math.random() * 100}%`;
-                        element.style.top = `${Math.random() * 100}%`;
-                        element.style.background = `rgba(${Math.random() * 100}, ${Math.random() * 100}, 246, ${Math.random() * 0.08})`;
-                        element.style.animation = `float ${Math.random() * 20 + 15}s infinite ease-in-out ${Math.random() * 5}s`;
-                        element.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
-                        section.appendChild(element);
-                    }
-                }
-            });
-        }
-        
-        // Initialize floating elements
-        createFloatingElements();
-        
-        // Add animation to page hero elements
+        // Animate page hero elements
         document.addEventListener('DOMContentLoaded', () => {
             const pageTitle = document.querySelector('.page-title');
             const pageSubtitle = document.querySelector('.page-subtitle');
@@ -1225,6 +1219,32 @@
                 pageSubtitle.style.transform = 'translateY(0)';
             }, 300);
         });
+        
+        // Create floating elements dynamically
+        function createFloatingElements() {
+            const sections = ['.page-hero', '.filter-section', '.certificates-section'];
+            
+            sections.forEach(sectionSelector => {
+                const section = document.querySelector(sectionSelector);
+                if (section) {
+                    for (let i = 0; i < 3; i++) {
+                        const element = document.createElement('div');
+                        element.className = 'floating-element';
+                        element.style.width = `${Math.random() * 60 + 20}px`;
+                        element.style.height = element.style.width;
+                        element.style.left = `${Math.random() * 100}%`;
+                        element.style.top = `${Math.random() * 100}%`;
+                        element.style.background = `rgba(${Math.random() * 100}, ${Math.random() * 100}, 246, ${Math.random() * 0.08})`;
+                        element.style.animation = `float ${Math.random() * 20 + 15}s infinite ease-in-out ${Math.random() * 5}s`;
+                        element.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
+                        section.appendChild(element);
+                    }
+                }
+            });
+        }
+        
+        // Initialize floating elements
+        createFloatingElements();
     </script>
 </body>
 </html>
