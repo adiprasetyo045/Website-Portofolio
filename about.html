@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | About</title>
+    <title>Tentang | Adi Prasetyo</title>
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/assets/css/responsive.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -20,11 +26,34 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            min-height: 100vh;
-            color: #1e293b;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
             line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Dark Theme Professional Color Palette */
+        :root {
+            --primary-dark: #1e40af;
+            --primary: #3b82f6;
+            --primary-light: #60a5fa;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --neutral-darkest: #0f172a;
+            --neutral-darker: #1e293b;
+            --neutral-dark: #334155;
+            --neutral: #64748b;
+            --neutral-light: #94a3b8;
+            --neutral-lighter: #cbd5e1;
+            --neutral-lightest: #f1f5f9;
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --success: #10b981;
+            --shadow: rgba(0, 0, 0, 0.25);
+            --shadow-dark: rgba(0, 0, 0, 0.4);
+            --glass: rgba(30, 41, 59, 0.7);
+            --glass-light: rgba(30, 41, 59, 0.9);
         }
         
         /* Navbar Styles */
@@ -33,11 +62,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--glass);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             z-index: 1000;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .nav-container {
@@ -52,15 +83,15 @@
         .nav-logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #1e293b;
+            color: var(--neutral-lightest);
             text-decoration: none;
             display: flex;
             align-items: center;
         }
         
         .nav-logo span {
-            color: #3b82f6;
-            margin-left: 2px;
+            color: var(--secondary);
+            margin-left: 4px;
         }
         
         .nav-menu {
@@ -75,20 +106,21 @@
         }
         
         .nav-link {
-            color: #64748b;
+            color: var(--neutral-light);
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
             padding: 0.5rem 0;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .nav-link:hover {
-            color: #3b82f6;
+            color: var(--primary-light);
         }
         
         .nav-link.active {
-            color: #3b82f6;
+            color: var(--white);
+            font-weight: 600;
         }
         
         .nav-link.active::after {
@@ -98,7 +130,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #3b82f6;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
@@ -115,7 +147,7 @@
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: #475569;
+            background-color: var(--neutral-lighter);
             transition: all 0.3s ease;
         }
         
@@ -125,7 +157,7 @@
             display: flex;
             align-items: center;
             padding: 140px 2rem 60px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -138,7 +170,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
         
@@ -151,14 +184,18 @@
         
         .page-title {
             font-size: 3.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 1rem;
             font-weight: 700;
+            background: linear-gradient(135deg, var(--white) 0%, var(--neutral-lighter) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .page-subtitle {
             font-size: 1.25rem;
-            color: #475569;
+            color: var(--neutral-light);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -173,7 +210,18 @@
         /* About Content Section */
         .about-content {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--neutral-darkest);
+            position: relative;
+        }
+        
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .about-grid {
@@ -197,8 +245,17 @@
         .profile-img {
             width: 100%;
             height: auto;
-            border-radius: 2rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--neutral-darker);
+            filter: grayscale(20%);
+            transition: all 0.5s ease;
+        }
+        
+        .profile-img:hover {
+            filter: grayscale(0%);
+            transform: translateY(-5px);
         }
         
         .image-wrapper::before {
@@ -208,14 +265,29 @@
             right: -15px;
             width: 100%;
             height: 100%;
-            border: 3px solid #3b82f6;
-            border-radius: 2rem;
+            border: 2px solid var(--secondary);
+            border-radius: 1.5rem;
             z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .image-decoration {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            opacity: 0.15;
+            z-index: -1;
+            filter: blur(10px);
+            animation: morph 8s ease-in-out infinite;
         }
         
         .section-title {
             font-size: 2.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.75rem;
@@ -228,30 +300,32 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
         .about-description {
             font-size: 1.125rem;
-            color: #64748b;
+            color: var(--neutral-lighter);
             line-height: 1.7;
             margin-bottom: 1.5rem;
         }
         
         .personal-info {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: rgba(30, 41, 59, 0.7);
             padding: 2rem;
             border-radius: 1rem;
             margin-top: 2rem;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid var(--primary);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .info-item {
             display: flex;
             margin-bottom: 1rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .info-item:last-child {
@@ -263,18 +337,29 @@
         .info-label {
             font-weight: 600;
             min-width: 120px;
-            color: #475569;
+            color: var(--secondary-light);
         }
         
         .info-value {
-            color: #64748b;
+            color: var(--neutral-lighter);
             flex: 1;
         }
         
         /* Education Section */
         .education-section {
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: var(--neutral-darker);
+            position: relative;
+        }
+        
+        .education-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
         }
         
         .section-header {
@@ -293,7 +378,7 @@
         
         .section-subtitle {
             font-size: 1.125rem;
-            color: #64748b;
+            color: var(--neutral-light);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -311,7 +396,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
@@ -332,8 +417,8 @@
             top: 0;
             width: 20px;
             height: 20px;
-            background: white;
-            border: 4px solid #3b82f6;
+            background: var(--neutral-darker);
+            border: 4px solid var(--primary);
             border-radius: 50%;
             z-index: 1;
         }
@@ -342,50 +427,66 @@
             position: absolute;
             left: 0;
             top: 0;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
-            color: white;
-            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
             border-radius: 2rem;
             font-size: 0.875rem;
             font-weight: 600;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 2;
         }
         
         .timeline-content {
-            background: white;
+            background: rgba(30, 41, 59, 0.7);
             padding: 2rem;
             border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .timeline-content:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
         }
         
         .timeline-content h3 {
             font-size: 1.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
         
         .timeline-content h4 {
             font-size: 1.125rem;
-            color: #3b82f6;
+            color: var(--primary-light);
             font-weight: 500;
             margin-bottom: 1rem;
         }
         
         .timeline-content p {
-            color: #64748b;
+            color: var(--neutral-lighter);
             margin-bottom: 0.5rem;
         }
         
         /* Skills Section */
         .skills-section {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--neutral-darkest);
+            position: relative;
+        }
+        
+        .skills-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .skills-grid {
@@ -397,25 +498,28 @@
         }
         
         .skill-category {
-            background: white;
+            background: rgba(30, 41, 59, 0.7);
             padding: 2rem;
             border-radius: 1rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #3b82f6;
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 4px solid var(--primary);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-top-color: var(--secondary);
         }
         
         .skill-category-title {
             font-size: 1.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 1.5rem;
             padding-bottom: 0.75rem;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
         }
         
         .skill-items {
@@ -434,12 +538,12 @@
             display: flex;
             justify-content: space-between;
             font-weight: 500;
-            color: #475569;
+            color: var(--neutral-lighter);
         }
         
         .skill-bar {
             height: 10px;
-            background: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 5px;
             overflow: hidden;
             position: relative;
@@ -447,7 +551,7 @@
         
         .skill-level {
             height: 100%;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(90deg, var(--primary), var(--primary-light));
             border-radius: 5px;
             position: relative;
             transition: width 1.5s ease-in-out;
@@ -473,11 +577,28 @@
             }
         }
         
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+        
         /* Footer Styles */
         .footer {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 100%);
+            color: var(--white);
             padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .footer-container {
@@ -493,29 +614,47 @@
             margin-bottom: 3rem;
         }
         
+        .footer-brand {
+            max-width: 300px;
+        }
+        
         .footer-logo {
             font-size: 1.75rem;
             font-weight: 700;
-            color: white;
+            color: var(--white);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .footer-logo span {
-            color: #3b82f6;
+            color: var(--secondary);
         }
         
-        .footer-logo p {
-            color: #94a3b8;
-            font-size: 0.875rem;
+        .footer-brand p {
+            color: var(--neutral-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .footer-links h3,
         .footer-social h3 {
             font-size: 1.125rem;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-links h3::after,
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
         
         .footer-links ul {
@@ -528,14 +667,16 @@
         }
         
         .footer-links a {
-            color: #94a3b8;
+            color: var(--neutral-light);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
+            display: inline-block;
         }
         
         .footer-links a:hover {
-            color: white;
+            color: var(--primary-light);
+            transform: translateX(5px);
         }
         
         .social-icons {
@@ -547,27 +688,68 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
-            color: white;
+            color: var(--white);
             font-size: 1.125rem;
             transition: all 0.3s ease;
             text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-icons a:hover {
-            background: #3b82f6;
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.3);
+            border-color: transparent;
         }
         
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--neutral);
             font-size: 0.875rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Floating Background Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.05);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .floating-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .floating-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            right: 10%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
         
         /* Responsive Styles */
@@ -639,6 +821,8 @@
                 position: relative;
                 margin-bottom: 1rem;
                 display: inline-block;
+                left: auto;
+                top: auto;
             }
             
             .education-section,
@@ -668,14 +852,16 @@
                 top: 70px;
                 left: -100%;
                 flex-direction: column;
-                background: white;
+                background: var(--glass-light);
+                backdrop-filter: blur(15px);
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 padding: 2rem 0;
                 z-index: 999;
                 gap: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
             }
             
             .nav-menu.active {
@@ -691,8 +877,20 @@
                 text-align: center;
             }
             
+            .footer-links h3::after,
+            .footer-social h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             .social-icons {
                 justify-content: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
             }
         }
         
@@ -715,11 +913,16 @@
         }
     </style>
 </head>
+
 <body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element floating-1"></div>
+    <div class="floating-element floating-2"></div>
+    
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portfolio<span>.</span></a>
+            <a href="index.html" class="nav-logo">Adi<span>.</span></a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link active">Tentang</a></li>
@@ -750,21 +953,22 @@
                 <div class="about-image">
                     <div class="image-wrapper">
                         <img src="assets/images/profile.jpg" alt="Foto Profil" class="profile-img">
+                        <div class="image-decoration"></div>
                     </div>
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">Halo, saya Adi Prasetyo</h2>
                     <p class="about-description">
-                        Saya adalah mahasiswa Rekayasa Perangkat Lunak dengan passion dalam membangun solusi inovatif di bidang teknologi. Perjalanan saya di dunia teknologi dimulai 2 tahun yang lalu, dan sejak itu saya mengembangkan keahlian dalam pengembangan web  dan MachineLearning.
+                        Saya adalah mahasiswa Rekayasa Perangkat Lunak dengan passion dalam membangun solusi inovatif di bidang teknologi. Perjalanan saya di dunia teknologi dimulai 2 tahun yang lalu, dan sejak itu saya mengembangkan keahlian dalam pengembangan web dan Machine Learning.
                     </p>
                     <p class="about-description">
-                        Saya percaya teknologi memiliki kekuatan untuk mentransformasi layanan kesehatan, membuatnya lebih mudah diakses, efisien, dan personal. Penelitian akademis saya berfokus pada penerapan algoritma machine Learning  untuk deteksi penyakit dini dan analisis gambar medis.
+                        Saya percaya teknologi memiliki kekuatan untuk mentransformasi layanan kesehatan, membuatnya lebih mudah diakses, efisien, dan personal. Penelitian akademis saya berfokus pada penerapan algoritma machine Learning untuk deteksi penyakit dini dan analisis gambar medis.
                     </p>
                     
                     <div class="personal-info">
                         <div class="info-item">
                             <span class="info-label">Asal :</span>
-                            <span class="info-value">Eromoko, Wonogiri jawa tengah </span>
+                            <span class="info-value">Eromoko, Wonogiri Jawa Tengah</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Pendidikan:</span>
@@ -776,7 +980,7 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">Minat:</span>
-                            <span class="info-value">Teknologi Informasi, AI/ML, Pengembangan Web, Jaringan Komputer </span>
+                            <span class="info-value">Teknologi Informasi, AI/ML, Pengembangan Web, Jaringan Komputer</span>
                         </div>
                     </div>
                 </div>
@@ -797,22 +1001,42 @@
                     <div class="timeline-content">
                         <h3>Institut Teknologi Statistika dan Bisnis Muhammadiyah Semarang</h3>
                         <h4>Sarjana Ilmu Komputer</h4>
-                        <p>IPK: - | Spesialisasi: Kecerdasan Buatan & Machine Learning</p>
+                        <p>Spesialisasi: Kecerdasan Buatan & Machine Learning</p>
                         <p>Mata Kuliah Relevan: Struktur Data & Algoritma, Machine Learning, Konstruksi Perangkat Lunak, Sistem Basis Data, Jaringan Komputer, Pengujian Perangkat Lunak</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2016 - 2020</div>
+                    <div class="timeline-date">2020 - 2023</div>
                     <div class="timeline-content">
                         <h3>SMA Muhammadiyah 1 Wonogiri</h3>
                         <h4>Program MIPA</h4>
-                        <p>Lulus dengan Penghafal Alquran terbanyak dari 1 angkatan  | Nilai sempurna</p>
-                        <p>Mata Pelajaran yang diperoleh : Keagamaan, Mapel Umum khususnya : MIPA, Desain meliputi : Canva, Corel., Basic microsoft, Basic koding :WordPress</p>
+                        <p>Lulus dengan Penghafal Alquran terbanyak dari 1 angkatan | Nilai sempurna</p>
+                        <p>Mata Pelajaran yang diperoleh : Keagamaan, Mapel Umum khususnya : MIPA, Desain meliputi : Canva, Corel., Basic microsoft, Basic koding : WordPress</p>
                         <p>Menimplementasikan hasil pembelajaran selama 3 tahun ke keagamaan khususnya memberikan ilmu kepada kaum panti asuhan</p>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2017 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>SMP Muhammadiyah 7 Eromoko</h3>
+                        <h4>Program Kelas Khusus</h4>
+                        <p>Lulus dengan hasil akademik yang baik.</p>
+                        <p>Mata pelajaran yang diperoleh meliputi Pendidikan Agama, 
+                           Pendidikan Kewarganegaraan, Bahasa Indonesia, Bahasa Inggris, 
+                           Matematika, Ilmu Pengetahuan Alam, Ilmu Pengetahuan Sosial, 
+                           Seni Budaya, Pendidikan Jasmani, Teknologi Informasi dan Komunikasi, 
+                           serta Muatan Lokal (Bahasa Jawa). </p>
+                        <p> Implementasi pembelajaran dilakukan melalui penerapan nilai 
+                            Pendidikan Agama dalam kegiatan keagamaan dan berbagi ilmu 
+                            dasar kepada anak-anak panti asuhan, penggunaan kemampuan 
+                            Bahasa Indonesia dan Bahasa Inggris untuk komunikasi dan 
+                            penyampaian materi, serta pemanfaatan Matematika dan IPA 
+                            dalam pembelajaran logika, perhitungan sederhana, dan 
+                            pemahaman fenomena sehari-hari. Nilai sosial dari IPS dan 
+                            PKn diterapkan dalam kerja sama, kepedulian sosial, dan 
+                            tanggung jawab sebagai anggota masyarakat. </p>
+    </div>
+</div>
     </section>
 
     <!-- Skills Section -->
@@ -820,7 +1044,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Keterampilan Teknis</h2>
-                <p class="section-subtitle">Teknologi dan alat yang saya gunakan</p>
+                <p class="section-subtitle">Teknologi dan alat yang saya kuasai</p>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
@@ -829,83 +1053,85 @@
                         <div class="skill-item">
                             <span class="skill-name">HTML5</span>
                             <div class="skill-bar">
-                                <div class="skill-level" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">CSS3</span>
-                            <div class="skill-bar">
                                 <div class="skill-level" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-name">CSS3 (Responsive)</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">React</span>
+                            <span class="skill-name">JavaScript (ES6+)</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 80%"></div>
                             </div>
                         </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Fetch API / AJAX</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Backend & Basis Data</h3>
+                    <h3 class="skill-category-title">Backend & Data Science</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">Python</span>
                             <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Flask (Web Framework)</span>
+                            <div class="skill-bar">
                                 <div class="skill-level" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Flask</span>
+                            <span class="skill-name">Pandas & NumPy</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Node.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">MySQL</span>
+                            <span class="skill-name">MySQL / CSV Data</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Pembelajaran Mesin & Alat</h3>
+                    <h3 class="skill-category-title">Machine Learning & Tools</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name">TensorFlow</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Scikit-learn</span>
-                            <div class="skill-bar">
-                                <div class="skill-level" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Git/GitHub</span>
+                            <span class="skill-name">Scikit-Learn</span>
                             <div class="skill-bar">
                                 <div class="skill-level" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name">Docker</span>
+                            <span class="skill-name">Decision Tree & K-NN</span>
                             <div class="skill-bar">
-                                <div class="skill-level" style="width: 70%"></div>
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Git & GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Hugging Face Deployment</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -919,8 +1145,8 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">Portfolio<span>.</span></a>
-                    <p>Situs Web Portofolio Pribadi</p>
+                    <a href="index.html" class="footer-logo">Adi<span>.</span></a>
+                    <p>Mahasiswa Rekayasa Perangkat Lunak dengan fokus pada AI dalam bidang kesehatan. Terus belajar dan berkontribusi dalam teknologi yang berdampak positif bagi masyarakat.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Tautan Cepat</h3>
@@ -935,15 +1161,16 @@
                 <div class="footer-social">
                     <h3>Terhubung dengan saya</h3>
                     <div class="social-icons">
-                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:prasetyaadhi398@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/adiprasetyo045" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adhi-prasetya-208584363/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:prasetyaadhi398@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2023</span> Adi Prasetyo. Hak cipta dilindungi.</p>
+                <p>Dibuat dengan <i class="fas fa-heart" style="color: #f59e0b;"></i> dan <i class="fas fa-coffee" style="color: #f59e0b;"></i></p>
             </div>
         </div>
     </footer>
@@ -972,11 +1199,15 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.padding = '0.8rem 0';
+                navbar.style.backdropFilter = 'blur(15px)';
             } else {
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+                navbar.style.background = 'rgba(30, 41, 59, 0.7)';
+                navbar.style.padding = '1rem 0';
+                navbar.style.backdropFilter = 'blur(10px)';
             }
         });
         
@@ -1032,6 +1263,57 @@
         
         // Animate on scroll
         window.addEventListener('scroll', animateTimelineItems);
+        
+        // Create floating elements dynamically
+        function createFloatingElements() {
+            const sections = ['.about-content', '.education-section', '.skills-section'];
+            
+            sections.forEach(sectionSelector => {
+                const section = document.querySelector(sectionSelector);
+                if (section) {
+                    for (let i = 0; i < 3; i++) {
+                        const element = document.createElement('div');
+                        element.className = 'floating-element';
+                        element.style.width = `${Math.random() * 60 + 20}px`;
+                        element.style.height = element.style.width;
+                        element.style.left = `${Math.random() * 100}%`;
+                        element.style.top = `${Math.random() * 100}%`;
+                        element.style.background = `rgba(${Math.random() * 100}, ${Math.random() * 100}, 246, ${Math.random() * 0.08})`;
+                        element.style.animation = `float ${Math.random() * 20 + 15}s infinite ease-in-out ${Math.random() * 5}s`;
+                        element.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
+                        section.appendChild(element);
+                    }
+                }
+            });
+        }
+        
+        // Initialize floating elements
+        createFloatingElements();
+        
+        // Add animation to page hero elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageTitle = document.querySelector('.page-title');
+            const pageSubtitle = document.querySelector('.page-subtitle');
+            
+            // Reset initial state
+            pageTitle.style.opacity = '0';
+            pageTitle.style.transform = 'translateY(20px)';
+            pageSubtitle.style.opacity = '0';
+            pageSubtitle.style.transform = 'translateY(20px)';
+            
+            // Animate in sequence
+            setTimeout(() => {
+                pageTitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pageTitle.style.opacity = '1';
+                pageTitle.style.transform = 'translateY(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                pageSubtitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pageSubtitle.style.opacity = '1';
+                pageSubtitle.style.transform = 'translateY(0)';
+            }, 300);
+        });
     </script>
 </body>
 </html>

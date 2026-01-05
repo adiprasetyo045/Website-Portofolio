@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Home</title>
+    <title>Portfolio | Adi Prasetyo</title>
     
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,11 +26,34 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            min-height: 100vh;
-            color: #1e293b;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
             line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Dark Theme Professional Color Palette */
+        :root {
+            --primary-dark: #1e40af;
+            --primary: #3b82f6;
+            --primary-light: #60a5fa;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --neutral-darkest: #0f172a;
+            --neutral-darker: #1e293b;
+            --neutral-dark: #334155;
+            --neutral: #64748b;
+            --neutral-light: #94a3b8;
+            --neutral-lighter: #cbd5e1;
+            --neutral-lightest: #f1f5f9;
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --success: #10b981;
+            --shadow: rgba(0, 0, 0, 0.25);
+            --shadow-dark: rgba(0, 0, 0, 0.4);
+            --glass: rgba(30, 41, 59, 0.7);
+            --glass-light: rgba(30, 41, 59, 0.9);
         }
         
         /* Navbar Styles */
@@ -39,11 +62,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--glass);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             z-index: 1000;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .nav-container {
@@ -58,15 +83,15 @@
         .nav-logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #1e293b;
+            color: var(--neutral-lightest);
             text-decoration: none;
             display: flex;
             align-items: center;
         }
         
         .nav-logo span {
-            color: #3b82f6;
-            margin-left: 2px;
+            color: var(--secondary);
+            margin-left: 4px;
         }
         
         .nav-menu {
@@ -81,20 +106,21 @@
         }
         
         .nav-link {
-            color: #64748b;
+            color: var(--neutral-light);
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
             padding: 0.5rem 0;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .nav-link:hover {
-            color: #3b82f6;
+            color: var(--primary-light);
         }
         
         .nav-link.active {
-            color: #3b82f6;
+            color: var(--white);
+            font-weight: 600;
         }
         
         .nav-link.active::after {
@@ -104,7 +130,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #3b82f6;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
@@ -121,7 +147,7 @@
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: #475569;
+            background-color: var(--neutral-lighter);
             transition: all 0.3s ease;
         }
         
@@ -130,8 +156,9 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 100px 2rem 80px;
+            padding: 120px 2rem 80px;
             position: relative;
+            background: linear-gradient(135deg, var(--neutral-darkest) 0%, #1a1f35 100%);
             overflow: hidden;
         }
         
@@ -139,11 +166,21 @@
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
             right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at 70% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
-            z-index: -1;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
         }
         
         .hero-container {
@@ -154,6 +191,8 @@
             grid-template-columns: 1.2fr 1fr;
             gap: 4rem;
             align-items: center;
+            position: relative;
+            z-index: 1;
         }
         
         .hero-content {
@@ -163,15 +202,16 @@
         .welcome-badge {
             display: inline-flex;
             align-items: center;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
-            color: white;
-            padding: 0.5rem 1.25rem;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
             border-radius: 2rem;
             font-size: 0.875rem;
             font-weight: 500;
             margin-bottom: 1.5rem;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .welcome-badge i {
@@ -183,30 +223,26 @@
             font-size: 3.5rem;
             line-height: 1.1;
             margin-bottom: 1rem;
-            color: #0f172a;
+            color: var(--white);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--white) 0%, var(--neutral-lighter) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .hero-title .highlight {
-            color: #3b82f6;
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             position: relative;
             display: inline-block;
         }
         
-        .hero-title .highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 5px;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background-color: rgba(59, 130, 246, 0.15);
-            z-index: -1;
-            border-radius: 4px;
-        }
-        
         .hero-subtitle {
             font-size: 1.5rem;
-            color: #475569;
+            color: var(--neutral-light);
             font-weight: 400;
             margin-bottom: 1.5rem;
         }
@@ -214,7 +250,7 @@
         .hero-description {
             font-size: 1.125rem;
             line-height: 1.7;
-            color: #64748b;
+            color: var(--neutral-lighter);
             margin-bottom: 2.5rem;
             max-width: 90%;
         }
@@ -230,42 +266,48 @@
             justify-content: center;
             padding: 0.875rem 2rem;
             border-radius: 0.5rem;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1rem;
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
             gap: 0.5rem;
+            letter-spacing: 0.3px;
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
-            color: white;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.6);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
         }
         
         .btn-secondary {
             background: transparent;
-            color: #3b82f6;
-            border: 2px solid #3b82f6;
+            color: var(--primary-light);
+            border: 2px solid var(--primary);
+            backdrop-filter: blur(5px);
         }
         
         .btn-secondary:hover {
-            background: rgba(59, 130, 246, 0.05);
-            transform: translateY(-2px);
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
+            border-color: var(--primary-light);
         }
         
         /* Profile Image Section */
         .profile-container {
             position: relative;
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             margin: 0 auto;
         }
         
@@ -273,20 +315,25 @@
             position: relative;
             width: 100%;
             height: 500px;
-            border-radius: 2rem;
+            border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--neutral-darker);
+            z-index: 2;
         }
         
         .profile-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.8s ease;
+            filter: grayscale(20%);
         }
         
         .profile-image-wrapper:hover .profile-image {
             transform: scale(1.05);
+            filter: grayscale(0%);
         }
         
         .profile-frame {
@@ -295,28 +342,87 @@
             right: -15px;
             width: 100%;
             height: 100%;
-            border: 3px solid #3b82f6;
-            border-radius: 2rem;
-            z-index: -1;
+            border: 2px solid var(--secondary);
+            border-radius: 1.5rem;
+            z-index: 1;
+            opacity: 0.7;
         }
         
         .profile-decoration {
             position: absolute;
             bottom: -20px;
             left: -20px;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
-            border-radius: 50%;
-            opacity: 0.1;
-            z-index: -1;
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            opacity: 0.15;
+            z-index: 0;
+            animation: morph 8s ease-in-out infinite;
+            filter: blur(10px);
+        }
+        
+        .profile-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 110%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        @keyframes morph {
+            0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+        }
+        
+        /* Skills Preview */
+        .skills-preview {
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .skill-tag {
+            background: rgba(30, 41, 59, 0.7);
+            color: var(--primary-light);
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            box-shadow: 0 4px 12px var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
         }
         
         /* Footer Styles */
         .footer {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 100%);
+            color: var(--white);
             padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .footer-container {
@@ -332,29 +438,47 @@
             margin-bottom: 3rem;
         }
         
+        .footer-brand {
+            max-width: 300px;
+        }
+        
         .footer-logo {
             font-size: 1.75rem;
             font-weight: 700;
-            color: white;
+            color: var(--white);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .footer-logo span {
-            color: #3b82f6;
+            color: var(--secondary);
         }
         
-        .footer-logo p {
-            color: #94a3b8;
-            font-size: 0.875rem;
+        .footer-brand p {
+            color: var(--neutral-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .footer-links h3,
         .footer-social h3 {
             font-size: 1.125rem;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-links h3::after,
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
         
         .footer-links ul {
@@ -367,14 +491,16 @@
         }
         
         .footer-links a {
-            color: #94a3b8;
+            color: var(--neutral-light);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
+            display: inline-block;
         }
         
         .footer-links a:hover {
-            color: white;
+            color: var(--primary-light);
+            transform: translateX(5px);
         }
         
         .social-icons {
@@ -386,27 +512,68 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
-            color: white;
+            color: var(--white);
             font-size: 1.125rem;
             transition: all 0.3s ease;
             text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-icons a:hover {
-            background: #3b82f6;
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.3);
+            border-color: transparent;
         }
         
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--neutral);
             font-size: 0.875rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Floating Elements Animation */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.05);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .floating-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .floating-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            right: 10%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
         
         /* Responsive Styles */
@@ -426,7 +593,7 @@
         
         @media (max-width: 768px) {
             .hero {
-                padding: 120px 1.5rem 60px;
+                padding: 100px 1.5rem 60px;
             }
             
             .hero-container {
@@ -451,6 +618,13 @@
                 max-width: 350px;
             }
             
+            .profile-decoration {
+                width: 100px;
+                height: 100px;
+                bottom: -20px;
+                left: -20px;
+            }
+            
             /* Mobile Navigation */
             .hamburger {
                 display: block;
@@ -473,14 +647,16 @@
                 top: 70px;
                 left: -100%;
                 flex-direction: column;
-                background: white;
+                background: var(--glass-light);
+                backdrop-filter: blur(15px);
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 padding: 2rem 0;
                 z-index: 999;
                 gap: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
             }
             
             .nav-menu.active {
@@ -489,6 +665,12 @@
             
             .nav-item {
                 margin: 1.5rem 0;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
             }
         }
         
@@ -522,6 +704,12 @@
                 text-align: center;
             }
             
+            .footer-links h3::after,
+            .footer-social h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             .social-icons {
                 justify-content: center;
             }
@@ -530,10 +718,14 @@
 </head>
 
 <body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element floating-1"></div>
+    <div class="floating-element floating-2"></div>
+    
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portfolio<span>.</span></a>
+            <a href="index.html" class="nav-logo">Adi<span>.</span></a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link active">Beranda</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">Tentang</a></li>
@@ -572,9 +764,17 @@
                         <i class="fas fa-envelope"></i> Hubungi Saya
                     </a>
                 </div>
+                <div class="skills-preview">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AI in Healthcare</span>
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Data Science</span>
+                </div>
             </div>
             <div class="profile-container">
                 <div class="profile-image-wrapper">
+                    <div class="profile-glow"></div>
                     <img src="assets/images/profile.jpg" alt="Adi Prasetyo - Foto Profil" class="profile-image">
                 </div>
                 <div class="profile-frame"></div>
@@ -588,31 +788,32 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">Portfolio<span>.</span></a>
-                    <p>Situs Web Portofolio Pribadi</p>
+                    <a href="index.html" class="footer-logo">Adi<span>.</span></a>
+                    <p>Mahasiswa Rekayasa Perangkat Lunak dengan fokus pada AI dalam bidang kesehatan. Terus belajar dan berkontribusi dalam teknologi yang berdampak positif bagi masyarakat.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Tautan Cepat</h3>
                     <ul>
                         <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about.html">Tentang</a></li>
-                        <li><a href="experience.html">Pengalaman</a></li>
-                        <li><a href="project.html">Proyek</a></li>
-                        <li><a href="contact.html">Kontak</a></li>
+                        <li><a href="about.html">Tentang Saya</a></li>
+                        <li><a href="experience.html">Pengalaman & Pendidikan</a></li>
+                        <li><a href="project.html">Proyek & Portofolio</a></li>
+                        <li><a href="contact.html">Kontak & Kolaborasi</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h3>Terhubung dengan saya</h3>
                     <div class="social-icons">
-                        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:adi@example.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/adiprasetyo045" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/adhi-prasetya-208584363/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:adi@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year">2023</span> Adi Prasetyo. Hak cipta dilindungi.</p>
+                <p>&copy; <span id="current-year">2023</span> Adi Prasetyo. Semua hak dilindungi.</p>
+                <p>Dibuat dengan <i class="fas fa-heart" style="color: #f59e0b;"></i> dan <i class="fas fa-coffee" style="color: #f59e0b;"></i></p>
             </div>
         </div>
     </footer>
@@ -641,11 +842,15 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.padding = '0.8rem 0';
+                navbar.style.backdropFilter = 'blur(15px)';
             } else {
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+                navbar.style.background = 'rgba(30, 41, 59, 0.7)';
+                navbar.style.padding = '1rem 0';
+                navbar.style.backdropFilter = 'blur(10px)';
             }
         });
         
@@ -670,12 +875,12 @@
         window.addEventListener('load', () => {
             const profileImage = document.querySelector('.profile-image-wrapper');
             profileImage.style.opacity = '0';
-            profileImage.style.transform = 'translateX(20px)';
+            profileImage.style.transform = 'translateX(20px) scale(0.9)';
             
             setTimeout(() => {
                 profileImage.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
                 profileImage.style.opacity = '1';
-                profileImage.style.transform = 'translateX(0)';
+                profileImage.style.transform = 'translateX(0) scale(1)';
             }, 300);
         });
         
@@ -684,8 +889,11 @@
             const heroTitle = document.querySelector('.hero-title');
             const heroSubtitle = document.querySelector('.hero-subtitle');
             const heroDescription = document.querySelector('.hero-description');
+            const welcomeBadge = document.querySelector('.welcome-badge');
             
             // Reset initial state
+            welcomeBadge.style.opacity = '0';
+            welcomeBadge.style.transform = 'translateY(-10px)';
             heroTitle.style.opacity = '0';
             heroTitle.style.transform = 'translateY(20px)';
             heroSubtitle.style.opacity = '0';
@@ -695,24 +903,77 @@
             
             // Animate in sequence
             setTimeout(() => {
+                welcomeBadge.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                welcomeBadge.style.opacity = '1';
+                welcomeBadge.style.transform = 'translateY(0)';
+            }, 100);
+            
+            setTimeout(() => {
                 heroTitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 heroTitle.style.opacity = '1';
                 heroTitle.style.transform = 'translateY(0)';
-            }, 100);
+            }, 300);
             
             setTimeout(() => {
                 heroSubtitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 heroSubtitle.style.opacity = '1';
                 heroSubtitle.style.transform = 'translateY(0)';
-            }, 300);
+            }, 500);
             
             setTimeout(() => {
                 heroDescription.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 heroDescription.style.opacity = '1';
                 heroDescription.style.transform = 'translateY(0)';
-            }, 500);
+            }, 700);
+            
+            // Animate skill tags
+            setTimeout(() => {
+                const skillTags = document.querySelectorAll('.skill-tag');
+                skillTags.forEach((tag, index) => {
+                    tag.style.opacity = '0';
+                    tag.style.transform = 'translateY(10px)';
+                    
+                    setTimeout(() => {
+                        tag.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        tag.style.opacity = '1';
+                        tag.style.transform = 'translateY(0)';
+                    }, 800 + (index * 100));
+                });
+            }, 900);
         });
+        
+        // Add subtle animation to buttons on hover
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        
+        // Create floating elements dynamically
+        function createFloatingElements() {
+            const heroSection = document.querySelector('.hero');
+            for (let i = 0; i < 5; i++) {
+                const element = document.createElement('div');
+                element.className = 'floating-element';
+                element.style.width = `${Math.random() * 80 + 20}px`;
+                element.style.height = element.style.width;
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.top = `${Math.random() * 100}%`;
+                element.style.background = `rgba(${Math.random() * 100}, ${Math.random() * 100}, 246, ${Math.random() * 0.1})`;
+                element.style.animation = `float ${Math.random() * 20 + 15}s infinite ease-in-out ${Math.random() * 5}s`;
+                element.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
+                heroSection.appendChild(element);
+            }
+        }
+        
+        // Initialize floating elements
+        createFloatingElements();
     </script>
 </body>
 </html>
-

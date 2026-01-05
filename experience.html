@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Pengalaman</title>
+    <title>Pengalaman Organisasi | Adi Prasetyo</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -20,11 +20,34 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            min-height: 100vh;
-            color: #1e293b;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
             line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Dark Theme Professional Color Palette */
+        :root {
+            --primary-dark: #1e40af;
+            --primary: #3b82f6;
+            --primary-light: #60a5fa;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --neutral-darkest: #0f172a;
+            --neutral-darker: #1e293b;
+            --neutral-dark: #334155;
+            --neutral: #64748b;
+            --neutral-light: #94a3b8;
+            --neutral-lighter: #cbd5e1;
+            --neutral-lightest: #f1f5f9;
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --success: #10b981;
+            --shadow: rgba(0, 0, 0, 0.25);
+            --shadow-dark: rgba(0, 0, 0, 0.4);
+            --glass: rgba(30, 41, 59, 0.7);
+            --glass-light: rgba(30, 41, 59, 0.9);
         }
         
         /* Navbar Styles */
@@ -33,11 +56,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--glass);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             z-index: 1000;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .nav-container {
@@ -52,14 +77,14 @@
         .nav-logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #1e293b;
+            color: var(--neutral-lightest);
             text-decoration: none;
             display: flex;
             align-items: center;
         }
         
         .nav-logo span {
-            color: #3b82f6;
+            color: var(--secondary);
             margin-left: 2px;
         }
         
@@ -75,20 +100,21 @@
         }
         
         .nav-link {
-            color: #64748b;
+            color: var(--neutral-light);
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
             padding: 0.5rem 0;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .nav-link:hover {
-            color: #3b82f6;
+            color: var(--primary-light);
         }
         
         .nav-link.active {
-            color: #3b82f6;
+            color: var(--white);
+            font-weight: 600;
         }
         
         .nav-link.active::after {
@@ -98,7 +124,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #3b82f6;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
@@ -115,7 +141,7 @@
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: #475569;
+            background-color: var(--neutral-lighter);
             transition: all 0.3s ease;
         }
         
@@ -125,7 +151,7 @@
             display: flex;
             align-items: center;
             padding: 140px 2rem 60px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -138,7 +164,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
         
@@ -151,14 +178,18 @@
         
         .page-title {
             font-size: 3.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 1rem;
             font-weight: 700;
+            background: linear-gradient(135deg, var(--white) 0%, var(--neutral-lighter) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .page-subtitle {
             font-size: 1.25rem;
-            color: #475569;
+            color: var(--neutral-light);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -173,7 +204,18 @@
         /* Experience Timeline Section */
         .experience-section {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--neutral-darkest);
+            position: relative;
+        }
+        
+        .experience-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .timeline {
@@ -189,7 +231,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             border-radius: 2px;
             transform: translateX(-50%);
         }
@@ -211,18 +253,22 @@
         
         .timeline-content {
             width: 45%;
-            background: white;
+            background: rgba(30, 41, 59, 0.7);
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
             position: relative;
             transition: all 0.3s ease;
-            border-top: 4px solid #3b82f6;
+            border-top: 4px solid var(--primary);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .timeline-content:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            background: rgba(30, 41, 59, 0.9);
+            border-color: var(--secondary);
         }
         
         .timeline-item:nth-child(odd) .timeline-content {
@@ -239,10 +285,11 @@
             top: 2rem;
             width: 20px;
             height: 20px;
-            background: white;
-            border: 4px solid #3b82f6;
+            background: var(--neutral-darker);
+            border: 4px solid var(--primary);
             border-radius: 50%;
             z-index: 1;
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
         }
         
         .timeline-item:nth-child(odd) .timeline-content::before {
@@ -255,7 +302,7 @@
         
         .timeline-date {
             display: inline-block;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 2rem;
@@ -271,7 +318,7 @@
             right: 2rem;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -279,6 +326,12 @@
             color: white;
             font-size: 1.25rem;
             box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover .timeline-icon {
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            transform: scale(1.1);
         }
         
         .timeline-item:nth-child(even) .timeline-icon {
@@ -288,19 +341,19 @@
         
         .timeline-content h3 {
             font-size: 1.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
         
         .timeline-content h4 {
             font-size: 1.125rem;
-            color: #3b82f6;
+            color: var(--primary-light);
             font-weight: 500;
             margin-bottom: 1rem;
         }
         
         .timeline-content > p {
-            color: #64748b;
+            color: var(--neutral-light);
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
@@ -315,7 +368,7 @@
             position: relative;
             padding-left: 1.75rem;
             margin-bottom: 0.75rem;
-            color: #475569;
+            color: var(--neutral-lighter);
             line-height: 1.6;
         }
         
@@ -323,7 +376,7 @@
             content: '→';
             position: absolute;
             left: 0;
-            color: #3b82f6;
+            color: var(--primary);
             font-weight: bold;
         }
         
@@ -335,26 +388,141 @@
         }
         
         .tag {
-            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
-            color: #475569;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.1));
+            color: var(--neutral-lighter);
             padding: 0.375rem 1rem;
             border-radius: 2rem;
             font-size: 0.75rem;
             font-weight: 500;
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .tag:hover {
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Skills Section */
+        .skills-section {
+            padding: 5rem 2rem;
+            background: var(--neutral-darker);
+            position: relative;
+        }
+        
+        .skills-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+            text-align: center;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--neutral-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .skill-card {
+            background: rgba(30, 41, 59, 0.7);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .skill-card h3 {
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .skill-card p {
+            color: var(--neutral-lighter);
+            text-align: center;
+            line-height: 1.6;
         }
         
         /* Footer Styles */
         .footer {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 100%);
+            color: var(--white);
             padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .footer-container {
@@ -370,29 +538,47 @@
             margin-bottom: 3rem;
         }
         
+        .footer-brand {
+            max-width: 300px;
+        }
+        
         .footer-logo {
             font-size: 1.75rem;
             font-weight: 700;
-            color: white;
+            color: var(--white);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .footer-logo span {
-            color: #3b82f6;
+            color: var(--secondary);
         }
         
-        .footer-logo p {
-            color: #94a3b8;
-            font-size: 0.875rem;
+        .footer-brand p {
+            color: var(--neutral-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .footer-links h3,
         .footer-social h3 {
             font-size: 1.125rem;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-links h3::after,
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
         
         .footer-links ul {
@@ -405,14 +591,16 @@
         }
         
         .footer-links a {
-            color: #94a3b8;
+            color: var(--neutral-light);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
+            display: inline-block;
         }
         
         .footer-links a:hover {
-            color: white;
+            color: var(--primary-light);
+            transform: translateX(5px);
         }
         
         .social-icons {
@@ -424,27 +612,96 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
-            color: white;
+            color: var(--white);
             font-size: 1.125rem;
             transition: all 0.3s ease;
             text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-icons a:hover {
-            background: #3b82f6;
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.3);
+            border-color: transparent;
         }
         
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--neutral);
             font-size: 0.875rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Floating Background Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.05);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .floating-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .floating-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            right: 10%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.7);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
         }
         
         /* Responsive Styles */
@@ -471,7 +728,7 @@
                 font-size: 1.125rem;
             }
             
-            .experience-section {
+            .experience-section, .skills-section {
                 padding: 3rem 1.5rem;
             }
             
@@ -523,14 +780,16 @@
                 top: 70px;
                 left: -100%;
                 flex-direction: column;
-                background: white;
+                background: var(--glass-light);
+                backdrop-filter: blur(15px);
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 padding: 2rem 0;
                 z-index: 999;
                 gap: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
             }
             
             .nav-menu.active {
@@ -546,14 +805,37 @@
                 text-align: center;
             }
             
+            .footer-links h3::after,
+            .footer-social h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             .social-icons {
                 justify-content: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .back-to-top {
+                bottom: 80px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
             }
         }
         
         @media (max-width: 480px) {
             .page-title {
                 font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
             }
             
             .timeline-content {
@@ -589,14 +871,31 @@
                 padding: 0.25rem 0.75rem;
                 font-size: 0.7rem;
             }
+            
+            .back-to-top {
+                bottom: 70px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element floating-1"></div>
+    <div class="floating-element floating-2"></div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portofolio<span>.</span></a>
+            <a href="index.html" class="nav-logo">Adi<span>.</span></a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">Tentang</a></li>
@@ -615,8 +914,8 @@
     <!-- Experience Hero Section -->
     <section class="page-hero">
         <div class="container">
-            <h1 class="page-title">Pengalaman Saya</h1>
-            <p class="page-subtitle">Perjalanan profesional, magang, dan proyek akademik</p>
+            <h1 class="page-title">Pengalaman Organisasi</h1>
+            <p class="page-subtitle">Perjalanan saya dalam organisasi pelajar dan mahasiswa Muhammadiyah</p>
         </div>
     </section>
 
@@ -627,24 +926,25 @@
                 <!-- Experience Item 1 -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">Jun 2023 - Sekarang</div>
+                        <div class="timeline-date">2020 - 2023</div>
                         <div class="timeline-icon">
-                            <i class="fas fa-laptop-medical"></i>
+                            <i class="fas fa-users"></i>
                         </div>
-                        <h3>HealthTech Solutions Inc.</h3>
-                        <h4>Magang Teknik Pembelajaran Mesin</h4>
-                        <p>Mengembangkan dan menerapkan model pembelajaran mesin untuk deteksi dini retinopati diabetik dari gambar retina, mencapai akurasi 92%.</p>
+                        <h3>Ikatan Pelajar Muhammadiyah (IPM)</h3>
+                        <h4>Anggota Aktif & Koordinator Bidang Keilmuan</h4>
+                        <p>Sebagai anggota aktif IPM selama masa SMA, saya terlibat dalam berbagai kegiatan organisasi yang mengembangkan kemampuan kepemimpinan, kerja tim, dan pengabdian masyarakat.</p>
                         <ul class="experience-list">
-                            <li>Membangun model CNN menggunakan TensorFlow untuk klasifikasi gambar medis</li>
-                            <li>Mengoptimalkan performa model melalui penyesuaian hiperparameter dan augmentasi data</li>
-                            <li>Membuat pipeline data untuk pra-pemrosesan dataset pencitraan medis</li>
-                            <li>Berkolaborasi dengan profesional kesehatan untuk memvalidasi hasil model</li>
+                            <li>Mengkoordinasikan kegiatan diskusi keilmuan dan kajian rutin untuk anggota IPM</li>
+                            <li>Merancang dan melaksanakan program "Gerakan Literasi Sekolah" yang meningkatkan minat baca siswa</li>
+                            <li>Mengorganisir acara bakti sosial dan pengabdian masyarakat di lingkungan sekitar sekolah</li>
+                            <li>Membimbing anggota baru dalam memahami nilai-nilai Muhammadiyah dan kepemimpinan</li>
+                            <li>Berpartisipasi dalam Musyawarah Daerah IPM sebagai perwakilan sekolah</li>
                         </ul>
                         <div class="experience-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">OpenCV</span>
-                            <span class="tag">Pencitraan Medis</span>
+                            <span class="tag">Kepemimpinan</span>
+                            <span class="tag">Organisasi Pelajar</span>
+                            <span class="tag">Koordinasi Acara</span>
+                            <span class="tag">Pengabdian Masyarakat</span>
                         </div>
                     </div>
                 </div>
@@ -652,101 +952,72 @@
                 <!-- Experience Item 2 -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">Jan 2023 - Mei 2023</div>
+                        <div class="timeline-date">2023 - Sekarang</div>
                         <div class="timeline-icon">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-user-graduate"></i>
                         </div>
-                        <h3>Universitas Stanford - Lab Penelitian AI</h3>
-                        <h4>Asisten Penelitian Sarjana</h4>
-                        <p>Berkontribusi pada penelitian tentang aplikasi NLP untuk penilaian kesehatan mental menggunakan data media sosial.</p>
+                        <h3>Ikatan Mahasiswa Muhammadiyah (IMM)</h3>
+                        <h4>Anggota Bidang Riset dan Pengembangan Keilmuan</h4>
+                        <p>Aktif berkontribusi dalam Ikatan Mahasiswa Muhammadiyah sebagai bagian dari upaya pengembangan keilmuan dan intelektualitas mahasiswa sesuai dengan tri kompetensi IMM.</p>
                         <ul class="experience-list">
-                            <li>Mengembangkan model analisis sentimen untuk mendeteksi indikator depresi dalam teks</li>
-                            <li>Mengumpulkan dan memproses dataset dari API media sosial</li>
-                            <li>Membantu menulis makalah penelitian yang diajukan ke "Journal of Medical Internet Research"</li>
-                            <li>Mempresentasikan temuan di Simposium Penelitian Sarjana Stanford</li>
+                            <li>Mengembangkan program "Tech for Ummah" yang mengintegrasikan teknologi dengan nilai-nilai Islam</li>
+                            <li>Menjadi fasilitator dalam workshop pengembangan diri dan soft skills untuk mahasiswa</li>
+                            <li>Berpartisipasi dalam kegiatan sosial kemanusiaan dan pengabdian pada masyarakat</li>
+                            <li>Menyelenggarakan diskusi ilmiah tentang isu-isu kontemporer dan solusi berdasarkan nilai Islam</li>
+                            <li>Mengembangkan konten edukatif di media sosial IMM untuk menjangkau generasi muda</li>
+                            <li>Kolaborasi dengan organisasi kemahasiswaan lain untuk acara lintas organisasi</li>
                         </ul>
                         <div class="experience-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">NLP</span>
-                            <span class="tag">BERT</span>
-                            <span class="tag">Penelitian</span>
+                            <span class="tag">Riset & Pengembangan</span>
+                            <span class="tag">Kepemimpinan Mahasiswa</span>
+                            <span class="tag">Pengabdian Masyarakat</span>
+                            <span class="tag">Pengembangan Konten</span>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Experience Item 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Mei 2022 - Agu 2022</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>MedData Analytics</h3>
-                        <h4>Magang Ilmu Data</h4>
-                        <p>Bekerja pada proyek analitik prediktif untuk tingkat rawat ulang rumah sakit menggunakan data EHR pasien.</p>
-                        <ul class="experience-list">
-                            <li>Membangun model prediktif menggunakan Scikit-learn untuk mengidentifikasi pasien berisiko tinggi</li>
-                            <li>Membersihkan dan memproses dataset EHR skala besar (100k+ catatan)</li>
-                            <li>Membuat dashboard interaktif menggunakan Tableau untuk administrator rumah sakit</li>
-                            <li>Mengurangi tingkat rawat ulang yang diprediksi sebesar 15% melalui optimasi model</li>
-                        </ul>
-                        <div class="experience-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Tableau</span>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Gained Section -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Keterampilan yang Diperoleh</h2>
+                <p class="section-subtitle">Kemampuan yang saya kembangkan melalui pengalaman organisasi</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-people-carry"></i>
                     </div>
+                    <h3>Kepemimpinan</h3>
+                    <p>Kemampuan memimpin tim, mengambil inisiatif, dan membuat keputusan strategis dalam berbagai kegiatan organisasi.</p>
                 </div>
                 
-                <!-- Experience Item 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Sep 2021 - Apr 2022</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Perhimpunan Ilmu Komputer Stanford</h3>
-                        <h4>Wakil Presiden & Pemimpin Pengembangan Web</h4>
-                        <p>Memimpin inisiatif pengembangan web dan mengorganisir acara teknologi untuk 500+ anggota mahasiswa.</p>
-                        <ul class="experience-list">
-                            <li>Mendesain ulang dan mengembangkan situs web perhimpunan menggunakan HTML, CSS, JavaScript</li>
-                            <li>Mengorganisir 12+ workshop tentang pengembangan web, pembelajaran mesin, dan persiapan karir</li>
-                            <li>Membimbing 20+ mahasiswa dalam proyek pengembangan web</li>
-                            <li>Mengkoordinasikan hackathon tahunan dengan 150+ peserta</li>
-                        </ul>
-                        <div class="experience-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Kepemimpinan</span>
-                            <span class="tag">Perencanaan Acara</span>
-                        </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-comments"></i>
                     </div>
+                    <h3>Komunikasi</h3>
+                    <p>Keterampilan berkomunikasi efektif dengan berbagai pihak, penyampaian ide, dan negosiasi dalam tim kerja.</p>
                 </div>
                 
-                <!-- Experience Item 5 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jun 2021 - Agu 2021</div>
-                        <div class="timeline-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Inisiatif Code4Health</h3>
-                        <h4>Relawan Pengembang Web</h4>
-                        <p>Mengembangkan situs web informasi kesehatan untuk komunitas pedesaan dalam kolaborasi dengan organisasi nirlaba.</p>
-                        <ul class="experience-list">
-                            <li>Membangun situs web responsif yang menyediakan informasi kesehatan untuk komunitas kurang terlayani</li>
-                            <li>Menerapkan dukungan multibahasa untuk pengguna berbahasa Spanyol</li>
-                            <li>Mengintegrasikan sistem penjadwalan janji temu untuk klinik lokal</li>
-                            <li>Situs web melayani 5,000+ pengguna bulanan dalam 3 bulan pertama</li>
-                        </ul>
-                        <div class="experience-tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Flask</span>
-                            <span class="tag">Desain Responsif</span>
-                        </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tasks"></i>
                     </div>
+                    <h3>Manajemen Proyek</h3>
+                    <p>Kemampuan merencanakan, mengorganisir, dan melaksanakan program kerja organisasi dari awal hingga evaluasi.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Kerja Tim</h3>
+                    <p>Kemampuan bekerja sama dalam tim, menghargai perbedaan pendapat, dan berkontribusi untuk mencapai tujuan bersama.</p>
                 </div>
             </div>
         </div>
@@ -757,8 +1028,8 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">Portofolio<span>.</span></a>
-                    <p>Situs Web Portofolio Pribadi</p>
+                    <a href="index.html" class="footer-logo">Adi<span>.</span></a>
+                    <p>Mahasiswa Rekayasa Perangkat Lunak dengan fokus pada AI dalam bidang kesehatan. Terus belajar dan berkontribusi dalam teknologi yang berdampak positif bagi masyarakat.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Tautan Cepat</h3>
@@ -774,7 +1045,7 @@
                     <h3>Terhubung dengan saya</h3>
                     <div class="social-icons">
                         <a href="https://github.com/adiprasetyo045" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/adiprasetyo" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/adhi-prasetya-208584363/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="mailto:prasetyaadhi398@gmail.com"><i class="fas fa-envelope"></i></a>
                         <a href="https://wa.me/6285234641311" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
@@ -782,6 +1053,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2023</span> Adi Prasetyo. Hak cipta dilindungi undang-undang.</p>
+                <p>Dibuat dengan <i class="fas fa-heart" style="color: #f59e0b;"></i> dan <i class="fas fa-coffee" style="color: #f59e0b;"></i></p>
             </div>
         </div>
     </footer>
@@ -810,18 +1082,42 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.padding = '0.8rem 0';
+                navbar.style.backdropFilter = 'blur(15px)';
             } else {
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+                navbar.style.background = 'rgba(30, 41, 59, 0.7)';
+                navbar.style.padding = '1rem 0';
+                navbar.style.backdropFilter = 'blur(10px)';
             }
+        });
+        
+        // Back to Top Functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
         
         // Animate timeline items when they come into view
         const timelineItems = document.querySelectorAll('.timeline-content');
+        const skillCards = document.querySelectorAll('.skill-card');
         
-        const animateTimelineItems = () => {
+        const animateOnScroll = () => {
+            // Animate timeline items
             timelineItems.forEach(item => {
                 const rect = item.getBoundingClientRect();
                 const isVisible = (rect.top <= window.innerHeight - 100) && (rect.bottom >= 0);
@@ -831,20 +1127,39 @@
                     item.style.transform = 'translateY(0)';
                 }
             });
+            
+            // Animate skill cards
+            skillCards.forEach((card, index) => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = (rect.top <= window.innerHeight - 100) && (rect.bottom >= 0);
+                
+                if (isVisible) {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
         };
         
-        // Set initial state for timeline items
+        // Set initial state for animated elements
         timelineItems.forEach(item => {
             item.style.opacity = '0';
             item.style.transform = 'translateY(30px)';
             item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
         
+        skillCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
         // Initial animation
-        setTimeout(animateTimelineItems, 300);
+        setTimeout(animateOnScroll, 300);
         
         // Animate on scroll
-        window.addEventListener('scroll', animateTimelineItems);
+        window.addEventListener('scroll', animateOnScroll);
         
         // Add animation to tags on hover
         const tags = document.querySelectorAll('.tag');
@@ -856,6 +1171,57 @@
             tag.addEventListener('mouseleave', () => {
                 tag.style.transform = 'translateY(0)';
             });
+        });
+        
+        // Create floating elements dynamically
+        function createFloatingElements() {
+            const sections = ['.page-hero', '.experience-section', '.skills-section'];
+            
+            sections.forEach(sectionSelector => {
+                const section = document.querySelector(sectionSelector);
+                if (section) {
+                    for (let i = 0; i < 3; i++) {
+                        const element = document.createElement('div');
+                        element.className = 'floating-element';
+                        element.style.width = `${Math.random() * 60 + 20}px`;
+                        element.style.height = element.style.width;
+                        element.style.left = `${Math.random() * 100}%`;
+                        element.style.top = `${Math.random() * 100}%`;
+                        element.style.background = `rgba(${Math.random() * 100}, ${Math.random() * 100}, 246, ${Math.random() * 0.08})`;
+                        element.style.animation = `float ${Math.random() * 20 + 15}s infinite ease-in-out ${Math.random() * 5}s`;
+                        element.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
+                        section.appendChild(element);
+                    }
+                }
+            });
+        }
+        
+        // Initialize floating elements
+        createFloatingElements();
+        
+        // Add animation to page hero elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageTitle = document.querySelector('.page-title');
+            const pageSubtitle = document.querySelector('.page-subtitle');
+            
+            // Reset initial state
+            pageTitle.style.opacity = '0';
+            pageTitle.style.transform = 'translateY(20px)';
+            pageSubtitle.style.opacity = '0';
+            pageSubtitle.style.transform = 'translateY(20px)';
+            
+            // Animate in sequence
+            setTimeout(() => {
+                pageTitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pageTitle.style.opacity = '1';
+                pageTitle.style.transform = 'translateY(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                pageSubtitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pageSubtitle.style.opacity = '1';
+                pageSubtitle.style.transform = 'translateY(0)';
+            }, 300);
         });
     </script>
 </body>

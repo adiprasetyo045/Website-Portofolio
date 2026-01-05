@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio | Kontak</title>
+    <title>Kontak | Adi Prasetyo</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -20,11 +20,35 @@
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            min-height: 100vh;
-            color: #1e293b;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
             line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        /* Dark Theme Professional Color Palette */
+        :root {
+            --primary-dark: #1e40af;
+            --primary: #3b82f6;
+            --primary-light: #60a5fa;
+            --secondary: #f59e0b;
+            --secondary-light: #fbbf24;
+            --neutral-darkest: #0f172a;
+            --neutral-darker: #1e293b;
+            --neutral-dark: #334155;
+            --neutral: #64748b;
+            --neutral-light: #94a3b8;
+            --neutral-lighter: #cbd5e1;
+            --neutral-lightest: #f1f5f9;
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --success: #10b981;
+            --error: #ef4444;
+            --shadow: rgba(0, 0, 0, 0.25);
+            --shadow-dark: rgba(0, 0, 0, 0.4);
+            --glass: rgba(30, 41, 59, 0.7);
+            --glass-light: rgba(30, 41, 59, 0.9);
         }
         
         /* Navbar Styles */
@@ -33,11 +57,13 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: var(--glass);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             z-index: 1000;
-            padding: 1.2rem 0;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .nav-container {
@@ -52,14 +78,14 @@
         .nav-logo {
             font-size: 1.8rem;
             font-weight: 700;
-            color: #1e293b;
+            color: var(--neutral-lightest);
             text-decoration: none;
             display: flex;
             align-items: center;
         }
         
         .nav-logo span {
-            color: #3b82f6;
+            color: var(--secondary);
             margin-left: 2px;
         }
         
@@ -75,20 +101,21 @@
         }
         
         .nav-link {
-            color: #64748b;
+            color: var(--neutral-light);
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
             padding: 0.5rem 0;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .nav-link:hover {
-            color: #3b82f6;
+            color: var(--primary-light);
         }
         
         .nav-link.active {
-            color: #3b82f6;
+            color: var(--white);
+            font-weight: 600;
         }
         
         .nav-link.active::after {
@@ -98,7 +125,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #3b82f6;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
@@ -115,7 +142,7 @@
             width: 25px;
             height: 3px;
             margin: 5px auto;
-            background-color: #475569;
+            background-color: var(--neutral-lighter);
             transition: all 0.3s ease;
         }
         
@@ -125,7 +152,7 @@
             display: flex;
             align-items: center;
             padding: 140px 2rem 60px;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -138,7 +165,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
             z-index: 0;
         }
         
@@ -151,14 +179,18 @@
         
         .page-title {
             font-size: 3.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 1rem;
             font-weight: 700;
+            background: linear-gradient(135deg, var(--white) 0%, var(--neutral-lighter) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .page-subtitle {
             font-size: 1.25rem;
-            color: #475569;
+            color: var(--neutral-light);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -173,7 +205,18 @@
         /* Contact Section */
         .contact-section {
             padding: 5rem 2rem;
-            background: white;
+            background: var(--neutral-darkest);
+            position: relative;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .contact-grid {
@@ -185,7 +228,7 @@
         
         .section-title {
             font-size: 2.5rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 0.75rem;
@@ -198,13 +241,13 @@
             left: 0;
             width: 60px;
             height: 4px;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             border-radius: 2px;
         }
         
         .contact-description {
             font-size: 1.125rem;
-            color: #64748b;
+            color: var(--neutral-lighter);
             line-height: 1.7;
             margin-bottom: 2rem;
         }
@@ -222,83 +265,132 @@
             align-items: flex-start;
             gap: 1.25rem;
             padding: 1.5rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: rgba(30, 41, 59, 0.7);
             border-radius: 1rem;
-            border-left: 4px solid #3b82f6;
-            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            position: relative;
         }
         
         .contact-method:hover {
             transform: translateX(5px);
+            border-color: rgba(59, 130, 246, 0.3);
+            background: rgba(59, 130, 246, 0.1);
+        }
+        
+        .contact-method:active {
+            transform: translateX(5px) scale(0.98);
+        }
+        
+        /* Tooltip untuk informasi kontak */
+        .contact-method::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            background: var(--neutral-darker);
+            color: var(--neutral-lightest);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-method:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(-15px);
         }
         
         .method-icon {
             width: 50px;
             height: 50px;
-            background: white;
+            background: var(--neutral-darker);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #3b82f6;
+            color: var(--primary);
             font-size: 1.25rem;
             flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover .method-icon {
+            transform: scale(1.1);
+            color: var(--secondary-light);
         }
         
         .method-content h3 {
             font-size: 1.25rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 0.25rem;
         }
         
         .method-content p {
-            color: #64748b;
+            color: var(--neutral-light);
             font-size: 0.95rem;
             margin-bottom: 0.5rem;
         }
         
         .method-link {
-            color: #3b82f6;
+            color: var(--primary-light);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.875rem;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            transition: gap 0.3s ease;
+            transition: all 0.3s ease;
         }
         
         .method-link:hover {
             gap: 0.75rem;
+            color: var(--secondary-light);
         }
         
         .contact-note {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(99, 102, 241, 0.1));
+            background: rgba(59, 130, 246, 0.1);
             padding: 1.5rem;
             border-radius: 1rem;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid var(--primary);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .contact-note h3 {
             font-size: 1.125rem;
-            color: #0f172a;
+            color: var(--white);
             margin-bottom: 0.5rem;
         }
         
         .contact-note p {
-            color: #475569;
+            color: var(--neutral-lighter);
             font-size: 0.95rem;
             line-height: 1.6;
         }
         
         /* Contact Form */
         .contact-form-container {
-            background: white;
+            background: rgba(30, 41, 59, 0.7);
             padding: 2.5rem;
             border-radius: 1.5rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid #3b82f6;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border-top: 4px solid var(--primary);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .contact-form {
@@ -307,13 +399,14 @@
         
         .form-group {
             margin-bottom: 1.75rem;
+            position: relative;
         }
         
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
-            color: #475569;
+            color: var(--neutral-lighter);
             font-size: 0.95rem;
         }
         
@@ -321,21 +414,26 @@
         .form-group textarea {
             width: 100%;
             padding: 1rem;
-            border: 2px solid #e2e8f0;
+            border: 2px solid rgba(255, 255, 255, 0.1);
             border-radius: 0.75rem;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', 'Poppins', sans-serif;
             font-size: 1rem;
-            color: #1e293b;
+            color: var(--white);
             transition: all 0.3s ease;
-            background: #f8fafc;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--neutral);
         }
         
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #3b82f6;
-            background: white;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.1);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
         }
         
         .form-group textarea {
@@ -352,13 +450,15 @@
         .form-checkbox input {
             width: auto;
             margin: 0;
+            accent-color: var(--primary);
+            transform: scale(1.2);
         }
         
         .form-checkbox label {
             margin-bottom: 0;
             font-weight: normal;
             font-size: 0.9rem;
-            color: #64748b;
+            color: var(--neutral-light);
         }
         
         .btn {
@@ -367,11 +467,11 @@
             justify-content: center;
             width: 100%;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, #3b82f6, #6366f1);
-            color: white;
-            border: none;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 0.75rem;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', 'Poppins', sans-serif;
             font-size: 1rem;
             font-weight: 500;
             cursor: pointer;
@@ -379,18 +479,70 @@
             text-decoration: none;
             gap: 0.75rem;
             box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
         }
         
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn.loading {
+            pointer-events: none;
+            opacity: 0.8;
+        }
+        
+        .btn.loading .btn-text {
+            visibility: hidden;
+        }
+        
+        .btn.loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid transparent;
+            border-top-color: var(--white);
+            border-radius: 50%;
+            animation: button-loading-spinner 0.8s linear infinite;
+        }
+        
+        @keyframes button-loading-spinner {
+            from {
+                transform: rotate(0turn);
+            }
+            to {
+                transform: rotate(1turn);
+            }
         }
         
         .error-message {
-            color: #ef4444;
+            color: var(--error);
             font-size: 0.875rem;
             margin-top: 0.5rem;
             display: none;
+        }
+        
+        .form-group.error input,
+        .form-group.error textarea {
+            border-color: var(--error);
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+        }
+        
+        .form-group.success input,
+        .form-group.success textarea {
+            border-color: var(--success);
         }
         
         .form-success {
@@ -402,6 +554,19 @@
             border-radius: 0.75rem;
             margin-top: 1.5rem;
             text-align: center;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.5s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .form-success i {
@@ -417,7 +582,18 @@
         /* FAQ Section */
         .faq-section {
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            background: var(--neutral-darker);
+            position: relative;
+        }
+        
+        .faq-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
         }
         
         .section-header {
@@ -436,7 +612,7 @@
         
         .section-subtitle {
             font-size: 1.125rem;
-            color: #64748b;
+            color: var(--neutral-light);
             max-width: 600px;
             margin: 0 auto;
         }
@@ -447,12 +623,18 @@
         }
         
         .faq-item {
-            background: white;
+            background: rgba(30, 41, 59, 0.7);
             border-radius: 1rem;
             margin-bottom: 1rem;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
         
         .faq-question {
@@ -465,18 +647,18 @@
         }
         
         .faq-question:hover {
-            background-color: #f8fafc;
+            background-color: rgba(255, 255, 255, 0.05);
         }
         
         .faq-question h3 {
             font-size: 1.125rem;
-            color: #0f172a;
+            color: var(--white);
             margin: 0;
             font-weight: 500;
         }
         
         .faq-question i {
-            color: #64748b;
+            color: var(--neutral);
             transition: transform 0.3s ease;
         }
         
@@ -494,19 +676,99 @@
         
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
+            color: var(--primary);
         }
         
         .faq-answer p {
-            color: #64748b;
+            color: var(--neutral-lighter);
             line-height: 1.7;
             font-size: 1rem;
         }
         
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 1rem 1.5rem;
+            background: var(--neutral-darker);
+            color: var(--white);
+            border-radius: 0.75rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            z-index: 10000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--success);
+        }
+        
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .toast.error {
+            border-left-color: var(--error);
+        }
+        
+        .toast-icon {
+            font-size: 1.25rem;
+        }
+        
+        .toast.success .toast-icon {
+            color: var(--success);
+        }
+        
+        .toast.error .toast-icon {
+            color: var(--error);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(59, 130, 246, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.7);
+        }
+        
         /* Footer Styles */
         .footer {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
+            background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 100%);
+            color: var(--white);
             padding: 4rem 0 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
         
         .footer-container {
@@ -522,29 +784,47 @@
             margin-bottom: 3rem;
         }
         
+        .footer-brand {
+            max-width: 300px;
+        }
+        
         .footer-logo {
             font-size: 1.75rem;
             font-weight: 700;
-            color: white;
+            color: var(--white);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
         
         .footer-logo span {
-            color: #3b82f6;
+            color: var(--secondary);
         }
         
-        .footer-logo p {
-            color: #94a3b8;
-            font-size: 0.875rem;
+        .footer-brand p {
+            color: var(--neutral-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .footer-links h3,
         .footer-social h3 {
             font-size: 1.125rem;
             margin-bottom: 1.5rem;
-            color: white;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-links h3::after,
+        .footer-social h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
         }
         
         .footer-links ul {
@@ -557,14 +837,16 @@
         }
         
         .footer-links a {
-            color: #94a3b8;
+            color: var(--neutral-light);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
             font-size: 0.95rem;
+            display: inline-block;
         }
         
         .footer-links a:hover {
-            color: white;
+            color: var(--primary-light);
+            transform: translateX(5px);
         }
         
         .social-icons {
@@ -576,27 +858,68 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
-            color: white;
+            color: var(--white);
             font-size: 1.125rem;
             transition: all 0.3s ease;
             text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .social-icons a:hover {
-            background: #3b82f6;
-            transform: translateY(-3px);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(245, 158, 11, 0.3);
+            border-color: transparent;
         }
         
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--neutral);
             font-size: 0.875rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .footer-bottom p {
+            margin: 0.5rem 0;
+        }
+        
+        /* Floating Background Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.05);
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .floating-1 {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 5%;
+            animation: float 20s infinite ease-in-out;
+        }
+        
+        .floating-2 {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            right: 10%;
+            animation: float 25s infinite ease-in-out reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
         
         /* Responsive Styles */
@@ -675,14 +998,16 @@
                 top: 70px;
                 left: -100%;
                 flex-direction: column;
-                background: white;
+                background: var(--glass-light);
+                backdrop-filter: blur(15px);
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
-                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
                 padding: 2rem 0;
                 z-index: 999;
                 gap: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
             }
             
             .nav-menu.active {
@@ -698,8 +1023,33 @@
                 text-align: center;
             }
             
+            .footer-links h3::after,
+            .footer-social h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
             .social-icons {
                 justify-content: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .toast {
+                left: 1.5rem;
+                right: 1.5rem;
+                bottom: 20px;
+            }
+            
+            .back-to-top {
+                bottom: 80px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
             }
         }
         
@@ -735,14 +1085,37 @@
             .form-group textarea {
                 padding: 0.875rem;
             }
+            
+            .back-to-top {
+                bottom: 70px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Floating Background Elements -->
+    <div class="floating-element floating-1"></div>
+    <div class="floating-element floating-2"></div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message">Pesan berhasil dikirim!</span>
+    </div>
+    
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">Portofolio<span>.</span></a>
+            <a href="index.html" class="nav-logo">Adi<span>.</span></a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">Tentang</a></li>
@@ -778,29 +1151,29 @@
                     </p>
                     
                     <div class="contact-methods">
-                        <div class="contact-method">
+                        <div class="contact-method" data-tooltip="Klik untuk menyalin email" id="emailMethod">
                             <div class="method-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="method-content">
                                 <h3>Email</h3>
-                                <p>prasetyaadhi398@gmail.com</p>
+                                <p id="email-text">prasetyaadhi398@gmail.com</p>
                                 <a href="mailto:prasetyaadhi398@gmail.com" class="method-link">Kirim Pesan</a>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
+                        <div class="contact-method" data-tooltip="Buka profil LinkedIn">
                             <div class="method-icon">
                                 <i class="fab fa-linkedin"></i>
                             </div>
                             <div class="method-content">
                                 <h3>LinkedIn</h3>
                                 <p>Terhubung secara profesional</p>
-                                <a href="https://linkedin.com/in/adiprasetyo" target="_blank" class="method-link">Lihat Profil</a>
+                                <a href="https://www.linkedin.com/in/adhi-prasetya-208584363/" target="_blank" class="method-link">Lihat Profil</a>
                             </div>
                         </div>
                         
-                        <div class="contact-method">
+                        <div class="contact-method" data-tooltip="Lihat proyek GitHub">
                             <div class="method-icon">
                                 <i class="fab fa-github"></i>
                             </div>
@@ -811,7 +1184,7 @@
                             </div>
                         </div>
                         
-                        <div class="contact-method">
+                        <div class="contact-method" data-tooltip="Kirim pesan WhatsApp">
                             <div class="method-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
@@ -833,25 +1206,25 @@
                 <div class="contact-form-container">
                     <h2 class="section-title">Kirim Pesan</h2>
                     <form id="contactForm" class="contact-form">
-                        <div class="form-group">
+                        <div class="form-group" id="nameGroup">
                             <label for="name">Nama Lengkap *</label>
                             <input type="text" id="name" name="name" required placeholder="Masukkan nama lengkap Anda">
                             <div class="error-message" id="nameError"></div>
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group" id="emailGroup">
                             <label for="email">Alamat Email *</label>
                             <input type="email" id="email" name="email" required placeholder="Masukkan alamat email Anda">
                             <div class="error-message" id="emailError"></div>
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group" id="subjectGroup">
                             <label for="subject">Subjek</label>
                             <input type="text" id="subject" name="subject" placeholder="Tentang apa ini?">
                             <div class="error-message" id="subjectError"></div>
                         </div>
                         
-                        <div class="form-group">
+                        <div class="form-group" id="messageGroup">
                             <label for="message">Pesan *</label>
                             <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
                             <div class="error-message" id="messageError"></div>
@@ -864,7 +1237,9 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn">Kirim Pesan</button>
+                        <button type="submit" class="btn">
+                            <span class="btn-text">Kirim Pesan</span>
+                        </button>
                         
                         <div id="formSuccess" class="form-success">
                             <i class="fas fa-check-circle"></i>
@@ -933,8 +1308,8 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">Portofolio<span>.</span></a>
-                    <p>Situs Web Portofolio Pribadi</p>
+                    <a href="index.html" class="footer-logo">Adi<span>.</span></a>
+                    <p>Mahasiswa Rekayasa Perangkat Lunak dengan fokus pada AI dalam bidang kesehatan. Terus belajar dan berkontribusi dalam teknologi yang berdampak positif bagi masyarakat.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Tautan Cepat</h3>
@@ -950,7 +1325,7 @@
                     <h3>Terhubung dengan saya</h3>
                     <div class="social-icons">
                         <a href="https://github.com/adiprasetyo045" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/adiprasetyo" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/adhi-prasetya-208584363/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="mailto:prasetyaadhi398@gmail.com"><i class="fas fa-envelope"></i></a>
                         <a href="https://wa.me/6285234641311" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
@@ -958,6 +1333,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="current-year">2023</span> Adi Prasetyo. Hak cipta dilindungi undang-undang.</p>
+                <p>Dibuat dengan <i class="fas fa-heart" style="color: #f59e0b;"></i> dan <i class="fas fa-coffee" style="color: #f59e0b;"></i></p>
             </div>
         </div>
     </footer>
@@ -986,11 +1362,15 @@
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+                navbar.style.padding = '0.8rem 0';
+                navbar.style.backdropFilter = 'blur(15px)';
             } else {
-                navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+                navbar.style.background = 'rgba(30, 41, 59, 0.7)';
+                navbar.style.padding = '1rem 0';
+                navbar.style.backdropFilter = 'blur(10px)';
             }
         });
         
@@ -1014,6 +1394,51 @@
             });
         });
         
+        // Toast Notification Function
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            const toastMessage = toast.querySelector('.toast-message');
+            const toastIcon = toast.querySelector('.toast-icon');
+            
+            toastMessage.textContent = message;
+            
+            if (type === 'error') {
+                toast.classList.add('error');
+                toastIcon.className = 'fas fa-exclamation-circle toast-icon';
+            } else {
+                toast.classList.remove('error');
+                toastIcon.className = 'fas fa-check-circle toast-icon';
+            }
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+        
+        // Copy Email Functionality
+        const emailMethod = document.getElementById('emailMethod');
+        const emailText = document.getElementById('email-text').textContent;
+        
+        emailMethod.addEventListener('click', () => {
+            navigator.clipboard.writeText(emailText).then(() => {
+                showToast('Email berhasil disalin ke clipboard!', 'success');
+                
+                // Visual feedback
+                const methodIcon = emailMethod.querySelector('.method-icon');
+                methodIcon.style.backgroundColor = 'var(--success)';
+                methodIcon.style.color = 'white';
+                
+                setTimeout(() => {
+                    methodIcon.style.backgroundColor = '';
+                    methodIcon.style.color = '';
+                }, 1000);
+            }).catch(err => {
+                showToast('Gagal menyalin email. Silakan salin manual.', 'error');
+            });
+        });
+        
         // Form Validation
         const contactForm = document.getElementById('contactForm');
         const formSuccess = document.getElementById('formSuccess');
@@ -1022,72 +1447,86 @@
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-                // Reset error messages
+                // Reset error messages and styles
                 document.querySelectorAll('.error-message').forEach(error => {
                     error.style.display = 'none';
                     error.textContent = '';
                 });
                 
-                // Reset input borders
-                document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
-                    input.style.borderColor = '#e2e8f0';
+                document.querySelectorAll('.form-group').forEach(group => {
+                    group.classList.remove('error', 'success');
                 });
                 
                 let isValid = true;
                 
                 // Validate name
                 const nameInput = document.getElementById('name');
+                const nameGroup = document.getElementById('nameGroup');
                 if (!nameInput.value.trim()) {
                     document.getElementById('nameError').textContent = 'Nama wajib diisi';
                     document.getElementById('nameError').style.display = 'block';
-                    nameInput.style.borderColor = '#ef4444';
+                    nameGroup.classList.add('error');
                     isValid = false;
+                } else if (nameInput.value.trim().length < 2) {
+                    document.getElementById('nameError').textContent = 'Nama minimal 2 karakter';
+                    document.getElementById('nameError').style.display = 'block';
+                    nameGroup.classList.add('error');
+                    isValid = false;
+                } else {
+                    nameGroup.classList.add('success');
                 }
                 
                 // Validate email
                 const emailInput = document.getElementById('email');
+                const emailGroup = document.getElementById('emailGroup');
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailInput.value.trim()) {
                     document.getElementById('emailError').textContent = 'Email wajib diisi';
                     document.getElementById('emailError').style.display = 'block';
-                    emailInput.style.borderColor = '#ef4444';
+                    emailGroup.classList.add('error');
                     isValid = false;
                 } else if (!emailRegex.test(emailInput.value)) {
                     document.getElementById('emailError').textContent = 'Masukkan alamat email yang valid';
                     document.getElementById('emailError').style.display = 'block';
-                    emailInput.style.borderColor = '#ef4444';
+                    emailGroup.classList.add('error');
                     isValid = false;
+                } else {
+                    emailGroup.classList.add('success');
                 }
                 
                 // Validate message
                 const messageInput = document.getElementById('message');
+                const messageGroup = document.getElementById('messageGroup');
                 if (!messageInput.value.trim()) {
                     document.getElementById('messageError').textContent = 'Pesan wajib diisi';
                     document.getElementById('messageError').style.display = 'block';
-                    messageInput.style.borderColor = '#ef4444';
+                    messageGroup.classList.add('error');
                     isValid = false;
                 } else if (messageInput.value.trim().length < 10) {
                     document.getElementById('messageError').textContent = 'Pesan harus minimal 10 karakter';
                     document.getElementById('messageError').style.display = 'block';
-                    messageInput.style.borderColor = '#ef4444';
+                    messageGroup.classList.add('error');
                     isValid = false;
+                } else {
+                    messageGroup.classList.add('success');
                 }
                 
                 // Validate subject (optional, but check length if provided)
                 const subjectInput = document.getElementById('subject');
+                const subjectGroup = document.getElementById('subjectGroup');
                 if (subjectInput.value.trim() && subjectInput.value.trim().length < 5) {
                     document.getElementById('subjectError').textContent = 'Subjek harus minimal 5 karakter jika diisi';
                     document.getElementById('subjectError').style.display = 'block';
-                    subjectInput.style.borderColor = '#ef4444';
+                    subjectGroup.classList.add('error');
                     isValid = false;
+                } else if (subjectInput.value.trim()) {
+                    subjectGroup.classList.add('success');
                 }
                 
                 if (isValid) {
                     // Show loading state
                     const submitBtn = contactForm.querySelector('button[type="submit"]');
-                    const originalText = submitBtn.innerHTML;
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Mengirim...';
-                    submitBtn.disabled = true;
+                    submitBtn.classList.add('loading');
                     
                     // Simulate API call (in a real app, this would be an actual fetch request)
                     setTimeout(() => {
@@ -1095,19 +1534,15 @@
                         contactForm.reset();
                         
                         // Reset button
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('loading');
                         
-                        // Show success message
-                        formSuccess.style.display = 'block';
+                        // Remove success styles
+                        document.querySelectorAll('.form-group').forEach(group => {
+                            group.classList.remove('success');
+                        });
                         
-                        // Hide success message after 5 seconds
-                        setTimeout(() => {
-                            formSuccess.style.display = 'none';
-                        }, 5000);
-                        
-                        // Scroll to success message
-                        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        // Show success toast
+                        showToast('Pesan berhasil dikirim! Saya akan membalas segera.', 'success');
                         
                         // You would normally send the form data to a server here
                         // For demo purposes, we'll just log it
@@ -1120,79 +1555,175 @@
                             timestamp: new Date().toISOString()
                         };
                         console.log('Form submitted:', formData);
-                    }, 1500);
+                    }, 2000);
+                } else {
+                    // Show error toast
+                    showToast('Harap periksa form yang diisi', 'error');
                 }
             });
             
-            // Clear error on input
-            document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
-                input.addEventListener('input', () => {
-                    const errorElement = document.getElementById(input.id + 'Error');
+            // Real-time validation
+            const validateField = (input, minLength, isEmail = false) => {
+                const value = input.value.trim();
+                const group = input.closest('.form-group');
+                const errorElement = document.getElementById(input.id + 'Error');
+                
+                // Remove existing styles
+                group.classList.remove('error', 'success');
+                
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                }
+                
+                // Skip validation if empty (unless it's required)
+                if (value === '' && !input.required) {
+                    return;
+                }
+                
+                // Validation logic
+                if (input.required && value === '') {
+                    group.classList.add('error');
                     if (errorElement) {
-                        errorElement.style.display = 'none';
-                        input.style.borderColor = '#e2e8f0';
+                        errorElement.textContent = `${input.labels[0].textContent.replace(' *', '')} wajib diisi`;
+                        errorElement.style.display = 'block';
                     }
-                });
+                } else if (isEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                    group.classList.add('error');
+                    if (errorElement) {
+                        errorElement.textContent = 'Masukkan alamat email yang valid';
+                        errorElement.style.display = 'block';
+                    }
+                } else if (minLength && value.length < minLength) {
+                    group.classList.add('error');
+                    if (errorElement) {
+                        errorElement.textContent = `Minimal ${minLength} karakter`;
+                        errorElement.style.display = 'block';
+                    }
+                } else {
+                    group.classList.add('success');
+                }
+            };
+            
+            // Attach real-time validation
+            document.getElementById('name').addEventListener('blur', () => validateField(document.getElementById('name'), 2));
+            document.getElementById('email').addEventListener('blur', () => validateField(document.getElementById('email'), 0, true));
+            document.getElementById('subject').addEventListener('blur', () => {
+                const subjectInput = document.getElementById('subject');
+                if (subjectInput.value.trim()) {
+                    validateField(subjectInput, 5);
+                }
+            });
+            document.getElementById('message').addEventListener('blur', () => validateField(document.getElementById('message'), 10));
+        }
+        
+        // Back to Top Functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Animate elements on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.contact-method, .faq-item, .contact-form-container');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.contact-method, .faq-item, .contact-form-container').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // Initial animation check
+        setTimeout(animateOnScroll, 100);
+        
+        // Animate on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Create floating elements dynamically
+        function createFloatingElements() {
+            const sections = ['.page-hero', '.contact-section', '.faq-section'];
+            
+            sections.forEach(sectionSelector => {
+                const section = document.querySelector(sectionSelector);
+                if (section) {
+                    for (let i = 0; i < 3; i++) {
+                        const element = document.createElement('div');
+                        element.className = 'floating-element';
+                        element.style.width = `${Math.random() * 60 + 20}px`;
+                        element.style.height = element.style.width;
+                        element.style.left = `${Math.random() * 100}%`;
+                        element.style.top = `${Math.random() * 100}%`;
+                        element.style.background = `rgba(${Math.random() * 100}, ${Math.random() * 100}, 246, ${Math.random() * 0.08})`;
+                        element.style.animation = `float ${Math.random() * 20 + 15}s infinite ease-in-out ${Math.random() * 5}s`;
+                        element.style.animationDirection = Math.random() > 0.5 ? 'normal' : 'reverse';
+                        section.appendChild(element);
+                    }
+                }
             });
         }
         
-        // Animate contact methods on scroll
-        const contactMethods = document.querySelectorAll('.contact-method');
+        // Initialize floating elements
+        createFloatingElements();
         
-        const animateContactMethods = () => {
-            contactMethods.forEach((method, index) => {
-                const rect = method.getBoundingClientRect();
-                const isVisible = (rect.top <= window.innerHeight - 100) && (rect.bottom >= 0);
+        // Add animation to page hero elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageTitle = document.querySelector('.page-title');
+            const pageSubtitle = document.querySelector('.page-subtitle');
+            
+            // Reset initial state
+            pageTitle.style.opacity = '0';
+            pageTitle.style.transform = 'translateY(20px)';
+            pageSubtitle.style.opacity = '0';
+            pageSubtitle.style.transform = 'translateY(20px)';
+            
+            // Animate in sequence
+            setTimeout(() => {
+                pageTitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pageTitle.style.opacity = '1';
+                pageTitle.style.transform = 'translateY(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                pageSubtitle.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                pageSubtitle.style.opacity = '1';
+                pageSubtitle.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Initialize tooltips for contact methods
+            const contactMethods = document.querySelectorAll('.contact-method');
+            contactMethods.forEach(method => {
+                method.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
                 
-                if (isVisible) {
-                    method.style.opacity = '1';
-                    method.style.transform = 'translateX(0)';
-                }
+                method.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '';
+                });
             });
-        };
-        
-        // Set initial state for contact methods
-        contactMethods.forEach(method => {
-            method.style.opacity = '0';
-            method.style.transform = 'translateX(-20px)';
-            method.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
-        
-        // Initial animation
-        setTimeout(animateContactMethods, 300);
-        
-        // Animate on scroll
-        window.addEventListener('scroll', animateContactMethods);
-        
-        // Animate FAQ items on scroll
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        const animateFaqItems = () => {
-            faqItems.forEach((item, index) => {
-                const rect = item.getBoundingClientRect();
-                const isVisible = (rect.top <= window.innerHeight - 100) && (rect.bottom >= 0);
-                
-                if (isVisible) {
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateY(0)';
-                    }, index * 100);
-                }
-            });
-        };
-        
-        // Set initial state for FAQ items
-        faqItems.forEach(item => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        });
-        
-        // Initial animation
-        setTimeout(animateFaqItems, 500);
-        
-        // Animate on scroll
-        window.addEventListener('scroll', animateFaqItems);
     </script>
 </body>
 </html>
